@@ -1,0 +1,95 @@
+VERSION 1.0.0
+INPUT
+TITLE:
+  STAR analysis
+
+DATA:
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+VARIABLE:
+  NAMES ARE childId readk read1 mathk math1
+  male white black hisp;
+  USEVARIABLES ARE math1 mathk readk male black;
+  MISSING ARE ALL (-99);
+OUTPUT:
+ stdyx stdy;
+PLOT:
+ type = plot1 plot2;
+MODEL:
+  math1 ON mathk readk male black;
+[math1 mathk readk male black];
+INPUT_END
+2
+2
+2
+2
+1
+GENERAL
+0
+5
+0
+0
+math1 mathk readk male black
+2
+1 0 0 0 0
+0
+0
+1 1 mathk math1    0.433    0.124
+1 1 readk math1    0.480    0.222
+1 1 male math1   14.232    8.320
+1 1 black math1  -27.340    8.061
+2 1 readk mathk  845.297  212.731
+2 1 male mathk   -3.841    3.230
+2 1 male readk   -1.846    1.807
+2 1 black mathk   -3.665    2.930
+2 1 black readk   -1.286    1.631
+2 1 black male   -0.007    0.024
+4 1 math1  604.133  142.353
+5 1 mathk 2153.374  449.582
+5 1 readk  647.985  136.304
+5 1 male    0.250    0.035
+5 1 black    0.224    0.032
+11 1 mathk math1    0.476    0.134
+11 1 readk math1    0.290    0.135
+11 1 male math1    0.169    0.098
+11 1 black math1   -0.307    0.089
+12 1 readk mathk    0.716    0.071
+12 1 male mathk   -0.166    0.133
+12 1 male readk   -0.145    0.137
+12 1 black mathk   -0.167    0.128
+12 1 black readk   -0.107    0.133
+12 1 black male   -0.029    0.100
+14 1 math1    0.339    0.086
+15 1 mathk    1.000    0.000
+15 1 readk    1.000    0.000
+15 1 male    1.000    0.000
+15 1 black    1.000    0.000
+21 1 mathk math1    0.476    0.134
+21 1 readk math1    0.290    0.135
+21 1 male math1    0.169    0.098
+21 1 black math1   -0.307    0.089
+22 1 readk mathk    0.716    0.071
+22 1 male mathk   -0.166    0.133
+22 1 male readk   -0.145    0.137
+22 1 black mathk   -0.167    0.128
+22 1 black readk   -0.107    0.133
+22 1 black male   -0.029    0.100
+24 1 math1    0.339    0.086
+25 1 mathk    1.000    0.000
+25 1 readk    1.000    0.000
+25 1 male    1.000    0.000
+25 1 black    1.000    0.000
+31 1 mathk math1    0.433    0.124
+31 1 readk math1    0.480    0.222
+31 1 male math1   14.232    8.320
+31 1 black math1  -27.340    8.061
+32 1 readk mathk  845.297  212.731
+32 1 male mathk   -3.841    3.230
+32 1 male readk   -1.846    1.807
+32 1 black mathk   -3.665    2.930
+32 1 black readk   -1.286    1.631
+32 1 black male   -0.007    0.024
+34 1 math1  604.133  142.353
+35 1 mathk 2153.374  449.582
+35 1 readk  647.985  136.304
+35 1 male    0.250    0.035
+35 1 black    0.224    0.032

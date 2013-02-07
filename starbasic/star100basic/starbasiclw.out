@@ -1,0 +1,179 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+02/07/2013  10:10 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  STAR analysis
+
+  DATA:
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+   listwise = on;
+  VARIABLE:
+    NAMES ARE childId	readk	read1	mathk	math1
+    male	white black hisp;
+    USEVARIABLES ARE readk-black;
+    MISSING ARE ALL (-99);
+    categorical are male-black;
+  ANALYSIS:
+    TYPE IS Basic;
+
+  OUTPUT:  SAMPSTAT PATTERNS;
+  plot: type = plot1 plot2;
+
+
+
+*** WARNING in OUTPUT command
+  PATTERNS option is not available when LISTWISE=ON.
+  Request for PATTERNS is ignored.
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+STAR analysis
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                          36
+
+Number of dependent variables                                    7
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   READK       READ1       MATHK       MATH1
+
+  Binary and ordered categorical (ordinal)
+   MALE        WHITE       BLACK
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Parameterization                                             DELTA
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    MALE
+      Category 1    0.306       11.000
+      Category 2    0.694       25.000
+    WHITE
+      Category 1    0.333       12.000
+      Category 2    0.667       24.000
+    BLACK
+      Category 1    0.667       24.000
+      Category 2    0.333       12.000
+
+
+
+
+
+RESULTS FOR BASIC ANALYSIS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              READK         READ1         MATHK         MATH1         MALE$1
+              ________      ________      ________      ________      ________
+      1       444.222       534.667       484.222       538.667        -0.508
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              WHITE$1       BLACK$1
+              ________      ________
+      1        -0.431         0.431
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              READK         READ1         MATHK         MATH1         MALE
+              ________      ________      ________      ________      ________
+ READK        647.446
+ READ1          0.456      2430.204
+ MATHK          0.678         0.432      1884.936
+ MATH1          0.554         0.609         0.650      1479.933
+ MALE          -0.244         0.008        -0.194         0.165
+ WHITE         -0.040         0.422         0.041         0.500         0.279
+ BLACK          0.040        -0.422        -0.041        -0.500        -0.279
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              WHITE         BLACK
+              ________      ________
+ BLACK         -0.984
+
+
+     STANDARD ERRORS FOR ESTIMATED SAMPLE STATISTICS
+
+
+           S.E. FOR MEANS/INTERCEPTS/THRESHOLDS
+              READK         READ1         MATHK         MATH1         MALE$1
+              ________      ________      ________      ________      ________
+      1         5.250         8.601         7.801         6.623         0.219
+
+
+           S.E. FOR MEANS/INTERCEPTS/THRESHOLDS
+              WHITE$1       BLACK$1
+              ________      ________
+      1         0.216         0.216
+
+
+           S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              READK         READ1         MATHK         MATH1         MALE
+              ________      ________      ________      ________      ________
+ READK        166.068
+ READ1          0.127       937.815
+ MATHK          0.071         0.114       414.200
+ MATH1          0.107         0.117         0.110       371.441
+ MALE           0.189         0.212         0.208         0.188
+ WHITE          0.213         0.183         0.187         0.188         0.265
+ BLACK          0.213         0.183         0.187         0.188         0.265
+
+
+           S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              WHITE         BLACK
+              ________      ________
+ BLACK          0.000
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Scatterplots (sample values)
+  Sample proportions
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for TYPE=BASIC.
+  No diagram output was produced.
+
+
+     Beginning Time:  10:10:01
+        Ending Time:  10:10:01
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

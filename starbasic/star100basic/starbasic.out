@@ -1,0 +1,246 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+02/07/2013  10:05 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  STAR analysis
+
+  DATA:
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+
+  VARIABLE:
+    NAMES ARE childId	readk	read1	mathk	math1
+    male	white black hisp;
+    USEVARIABLES ARE readk-hisp;
+    MISSING ARE ALL (-99);
+    categorical are male-hisp;
+  ANALYSIS:
+    TYPE IS Basic;
+
+  OUTPUT:  SAMPSTAT PATTERNS;
+  plot: type = plot1 plot2;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+STAR analysis
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   READK       READ1       MATHK       MATH1
+
+  Binary and ordered categorical (ordinal)
+   MALE        WHITE       BLACK       HISP
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             6
+
+
+SUMMARY OF MISSING DATA PATTERNS
+
+
+     MISSING DATA PATTERNS (x = not missing)
+
+           1  2  3  4  5  6
+ READK     x  x  x
+ READ1     x        x
+ MATHK     x  x  x
+ MATH1     x  x     x  x
+ MALE      x  x  x  x  x  x
+ WHITE     x  x  x  x  x  x
+ BLACK     x  x  x  x  x  x
+ HISP      x  x  x  x  x  x
+
+
+     MISSING DATA PATTERN FREQUENCIES
+
+    Pattern   Frequency     Pattern   Frequency     Pattern   Frequency
+          1          36           3          11           5           2
+          2           1           4          17           6          33
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              READK         READ1         MATHK         MATH1         MALE
+              ________      ________      ________      ________      ________
+ READK          0.480
+ READ1          0.360         0.530
+ MATHK          0.480         0.360         0.480
+ MATH1          0.370         0.530         0.370         0.560
+ MALE           0.480         0.530         0.480         0.560         1.000
+ WHITE          0.480         0.530         0.480         0.560         1.000
+ BLACK          0.480         0.530         0.480         0.560         1.000
+ HISP           0.480         0.530         0.480         0.560         1.000
+
+
+           Covariance Coverage
+              WHITE         BLACK         HISP
+              ________      ________      ________
+ WHITE          1.000
+ BLACK          1.000         1.000
+ HISP           1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    MALE
+      Category 1    0.480       48.000
+      Category 2    0.520       52.000
+    WHITE
+      Category 1    0.370       37.000
+      Category 2    0.630       63.000
+    BLACK
+      Category 1    0.660       66.000
+      Category 2    0.340       34.000
+    HISP
+      Category 1    0.990       99.000
+      Category 2    0.010        1.000
+
+
+     WARNING:  THE SAMPLE CORRELATION OF BLACK AND WHITE IS -0.992
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+
+
+
+RESULTS FOR BASIC ANALYSIS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              READK         READ1         MATHK         MATH1         MALE$1
+              ________      ________      ________      ________      ________
+      1       440.625       527.887       480.667       534.232        -0.050
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              WHITE$1       BLACK$1       HISP$1
+              ________      ________      ________
+      1        -0.332         0.412         2.326
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              READK         READ1         MATHK         MATH1         MALE
+              ________      ________      ________      ________      ________
+ READK        597.438
+ READ1          0.460      2669.437
+ MATHK          0.689         0.452      1944.165
+ MATH1          0.569         0.696         0.663      1724.593
+ MALE          -0.047        -0.007        -0.049         0.022
+ WHITE          0.089         0.473         0.157         0.544         0.016
+ BLACK         -0.089        -0.471        -0.154        -0.544        -0.047
+ HISP           0.000         0.000         0.000         0.000        -0.021
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              WHITE         BLACK         HISP
+              ________      ________      ________
+ BLACK         -0.992
+ HISP          -0.127         0.152
+
+
+     STANDARD ERRORS FOR ESTIMATED SAMPLE STATISTICS
+
+
+           S.E. FOR MEANS/INTERCEPTS/THRESHOLDS
+              READK         READ1         MATHK         MATH1         MALE$1
+              ________      ________      ________      ________      ________
+      1         4.437         7.100         6.526         5.841         0.125
+
+
+           S.E. FOR MEANS/INTERCEPTS/THRESHOLDS
+              WHITE$1       BLACK$1       HISP$1
+              ________      ________      ________
+      1         0.128         0.129         0.373
+
+
+           S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              READK         READ1         MATHK         MATH1         MALE
+              ________      ________      ________      ________      ________
+ READK        125.280
+ READ1          0.127       644.950
+ MATHK          0.056         0.117       357.493
+ MATH1          0.107         0.068         0.106       314.551
+ MALE           0.184         0.174         0.181         0.170
+ WHITE          0.184         0.152         0.153         0.137         0.160
+ BLACK          0.180         0.156         0.150         0.137         0.162
+ HISP           5.361         5.102         5.361         4.964         0.332
+
+
+           S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              WHITE         BLACK         HISP
+              ________      ________      ________
+ BLACK          0.000
+ HISP           0.329         0.328
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Scatterplots (sample values)
+  Sample proportions
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for TYPE=BASIC.
+  No diagram output was produced.
+
+
+     Beginning Time:  10:05:54
+        Ending Time:  10:05:54
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

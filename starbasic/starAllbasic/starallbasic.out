@@ -1,0 +1,2541 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+02/07/2013   9:51 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: complete star analysis BASIC
+  DATA: FILE = "C:/Dropbox/3_Teaching/
+    MplusBasics/data/star.all.dat";
+  VARIABLE: NAMES = gender ethnic birth stark star1 star2 star3 readk read1 read2
+  read3 mathk math1 math2 math3 lunchk lunch1 lunch2 lunch3 schk sch1
+  sch2 sch3 degreek degree1 degree2 degree3 ladderk ladder1 ladder2 ladder3
+  experk exper1 exper2 exper3 tethnick tethnic1
+  tethnic2 tethnic3 systemk system1 system2 system3 schidk schid1
+  schid2 schid3;
+
+  MISSING=.;
+
+  analysis: type = basic;
+
+  output: sampstat;
+  plot: type = plot1 plot2 plot3;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+complete star analysis BASIC
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       11598
+
+Number of dependent variables                                   47
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   GENDER      ETHNIC      BIRTH       STARK       STAR1       STAR2
+   STAR3       READK       READ1       READ2       READ3       MATHK
+   MATH1       MATH2       MATH3       LUNCHK      LUNCH1      LUNCH2
+   LUNCH3      SCHK        SCH1        SCH2        SCH3        DEGREEK
+   DEGREE1     DEGREE2     DEGREE3     LADDERK     LADDER1     LADDER2
+   LADDER3     EXPERK      EXPER1      EXPER2      EXPER3      TETHNICK
+   TETHNIC1    TETHNIC2    TETHNIC3    SYSTEMK     SYSTEM1     SYSTEM2
+   SYSTEM3     SCHIDK      SCHID1      SCHID2      SCHID3
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  C:/Dropbox/3_Teaching/MplusBasics/data/star.all.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns           423
+
+
+SUMMARY OF MISSING DATA PATTERNS
+
+
+     MISSING DATA PATTERNS (x = not missing)
+
+           1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+ GENDER    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ ETHNIC    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ BIRTH     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STARK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATHK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LUNCHK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LUNCH1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LUNCH2    x  x  x  x  x  x  x  x  x  x  x  x  x              x  x  x
+ LUNCH3    x  x  x  x  x  x  x  x  x  x  x        x  x  x     x  x  x
+ SCHK      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH1      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH2      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH3      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREEK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x     x  x  x  x
+ DEGREE1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE2   x  x  x  x  x  x  x  x           x  x  x  x  x  x  x  x  x
+ DEGREE3   x  x  x  x  x  x        x  x  x  x  x  x  x  x  x  x  x  x
+ LADDERK   x  x  x  x  x     x  x  x  x     x     x        x  x  x  x
+ LADDER1   x  x  x  x     x  x  x  x     x  x  x  x  x  x  x  x  x  x
+ LADDER2   x  x  x     x  x  x  x           x  x  x  x  x  x  x     x
+ LADDER3   x  x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x
+ EXPERK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x     x  x  x  x
+ EXPER1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER2    x  x     x  x  x  x  x           x  x  x  x  x  x  x  x  x
+ EXPER3    x  x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNICK  x     x  x  x  x  x  x  x  x  x  x  x  x  x     x  x  x
+ TETHNIC1  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNIC2  x  x  x  x  x  x  x  x           x  x  x  x  x  x  x  x  x
+ TETHNIC3  x  x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEMK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHIDK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+ GENDER    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ ETHNIC    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ BIRTH     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STARK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ3     x  x  x  x  x  x  x  x  x  x  x  x
+ MATHK     x  x  x  x  x  x  x  x  x  x  x     x  x  x  x  x  x  x  x
+ MATH1     x  x  x  x  x  x  x              x  x  x  x  x  x  x  x  x
+ MATH2     x  x  x  x  x        x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH3     x  x           x  x  x  x  x  x  x  x
+ LUNCHK          x  x     x  x  x  x  x     x  x  x  x  x  x  x  x  x
+ LUNCH1          x  x     x  x  x  x  x     x  x  x  x  x  x  x  x  x
+ LUNCH2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LUNCH3    x     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHK      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH1      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH2      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH3      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREEK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE2   x  x  x  x  x  x  x  x  x     x  x  x  x  x  x     x  x
+ DEGREE3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LADDERK   x  x  x     x  x     x     x  x  x  x  x  x     x  x     x
+ LADDER1   x  x  x  x  x  x  x  x  x  x  x  x  x  x     x  x  x  x  x
+ LADDER2   x  x  x  x  x  x  x  x  x     x  x  x  x  x  x     x  x
+ LADDER3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPERK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER2    x  x  x  x  x  x  x  x  x     x  x  x  x  x  x     x  x
+ EXPER3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNICK        x  x     x  x  x  x  x     x  x  x  x  x  x  x  x  x
+ TETHNIC1        x  x     x  x  x  x  x     x  x  x  x  x  x  x  x  x
+ TETHNIC2  x  x  x  x  x  x  x  x  x     x  x  x  x  x  x     x  x
+ TETHNIC3  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEMK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHIDK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+ GENDER    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ ETHNIC    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ BIRTH     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STARK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ1     x  x  x  x  x  x  x  x  x  x  x  x
+ READ2     x  x  x                             x  x  x  x  x  x  x  x
+ READ3              x  x  x  x  x  x           x  x  x  x  x  x  x  x
+ MATHK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH2     x  x  x  x                          x  x  x  x  x  x  x  x
+ MATH3              x  x  x  x  x  x           x  x  x     x  x  x  x
+ LUNCHK    x  x     x  x  x  x  x     x  x  x  x  x  x  x  x  x  x
+ LUNCH1    x        x  x  x  x  x     x  x  x  x  x  x  x  x  x  x
+ LUNCH2       x  x  x  x  x  x     x  x  x     x  x  x  x  x  x  x  x
+ LUNCH3    x  x  x  x  x  x  x  x  x  x     x  x  x  x  x  x  x     x
+ SCHK      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH1      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH2      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH3      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREEK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE2   x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LADDERK   x  x  x  x  x     x  x  x  x  x  x  x  x     x  x  x  x  x
+ LADDER1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LADDER2   x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x
+ LADDER3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPERK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER2    x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x     x  x
+ EXPER3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNICK  x  x     x  x  x  x  x     x  x  x  x     x  x  x  x  x
+ TETHNIC1  x  x     x  x  x  x  x     x  x  x  x  x  x  x  x  x  x
+ TETHNIC2  x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNIC3  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEMK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHIDK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80
+ GENDER    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ ETHNIC    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ BIRTH     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STARK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ STAR3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ READ1                                                  x  x  x  x  x
+ READ2     x  x  x  x  x                                x  x  x  x  x
+ READ3                    x  x  x                       x  x  x  x  x
+ MATHK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATH1     x  x  x  x     x  x     x  x  x  x           x  x  x  x  x
+ MATH2     x  x  x  x  x  x                             x  x  x  x
+ MATH3     x              x  x  x  x  x  x     x  x     x  x  x  x  x
+ LUNCHK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LUNCH1    x  x  x  x  x  x  x  x  x  x     x  x  x  x  x  x  x     x
+ LUNCH2    x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x     x  x
+ LUNCH3    x  x     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHK      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH1      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH2      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCH3      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREEK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE1   x  x  x  x  x  x  x  x  x     x  x  x     x  x  x  x  x  x
+ DEGREE2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ DEGREE3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LADDERK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x     x  x  x
+ LADDER1   x  x  x  x  x  x  x  x  x     x  x  x     x  x  x  x  x  x
+ LADDER2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LADDER3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPERK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER1    x  x  x  x  x  x  x  x  x     x  x  x     x  x  x  x  x  x
+ EXPER2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ EXPER3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNICK  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNIC1  x  x  x  x  x  x  x  x  x     x  x  x     x  x  x  x  x  x
+ TETHNIC2  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ TETHNIC3  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEMK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SYSTEM3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHIDK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ SCHID3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+
+          81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+ GENDER    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ ETHNIC    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ BIRTH     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ STARK     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ STAR1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ STAR2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ STAR3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ READK
+ READ1     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ READ2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ READ3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ MATHK     x                                               x
+ MATH1        x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ MATH2     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x     x  x  x   x
+ MATH3     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
+ LUNCHK    x  x  x  x  x  x  x  x  x  x  x  x           x  x  x  x   x
+ LUNCH1    x  x  x  x  x  x  x  x  x  x        x  x  x  x  x  x  x
+ LUNCH2    x  x  x  x  x  x  x  x        x  x  x  x     x  x  x  x   x
+ LUNCH3    x  x  x  x  x  x  x     x     x  x  x  x  x  x  x  x  x   x
+ SCHK      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCH1      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCH2      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCH3      x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ DEGREEK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ DEGREE1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ DEGREE2   x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x   x
+ DEGREE3   x  x  x  x        x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ LADDERK   x  x  x     x  x  x  x  x  x  x  x  x     x  x  x  x  x   x
+ LADDER1   x  x     x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ LADDER2   x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x   x
+ LADDER3   x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ EXPERK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ EXPER1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ EXPER2    x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x      x
+ EXPER3    x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ TETHNICK  x  x  x  x  x  x  x  x  x  x  x  x        x  x  x  x  x   x
+ TETHNIC1  x  x  x  x  x  x  x  x  x  x  x     x  x  x  x  x  x  x
+ TETHNIC2  x  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x   x
+ TETHNIC3  x  x  x  x  x     x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SYSTEMK   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SYSTEM1   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SYSTEM2   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SYSTEM3   x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCHIDK    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCHID1    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCHID2    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+ SCHID3    x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x   x
+
+          101 102 103 104 105 106 107 108 109 110 111 112 113 114 115
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x
+ READK                                      x   x   x   x   x   x   x
+ READ1      x   x   x                       x   x   x   x   x   x   x
+ READ2                  x   x   x           x   x   x   x   x   x   x
+ READ3      x   x   x   x   x
+ MATHK                          x           x   x   x   x   x   x   x
+ MATH1      x   x   x   x           x       x   x   x   x   x   x   x
+ MATH2                  x   x   x           x   x   x   x   x   x   x
+ MATH3      x   x   x       x       x
+ LUNCHK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH2     x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH3     x   x   x   x   x   x   x   x
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x
+ DEGREEK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE3    x   x   x   x       x   x   x
+ LADDERK    x       x   x   x   x   x   x   x   x   x   x   x       x
+ LADDER1    x   x       x   x   x   x   x   x   x   x   x       x   x
+ LADDER2    x   x   x   x   x   x   x   x   x   x   x       x   x
+ LADDER3    x   x   x   x       x   x   x
+ EXPERK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x   x   x   x   x   x   x       x   x   x
+ EXPER3     x   x   x   x       x   x   x
+ TETHNICK   x   x   x   x   x   x   x   x   x       x   x   x   x   x
+ TETHNIC1   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC3   x   x   x   x       x   x   x
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x
+
+          116 117 118 119 120 121 122 123 124 125 126 127 128 129 130
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3
+ READK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READ1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READ2      x   x   x   x   x   x   x   x
+ READ3
+ MATHK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ MATH1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ MATH2      x   x   x   x   x   x   x       x
+ MATH3
+ LUNCHK     x   x   x   x   x           x   x   x   x   x   x   x   x
+ LUNCH1     x   x   x           x       x   x   x   x   x   x   x   x
+ LUNCH2                 x   x   x   x   x   x   x   x   x   x
+ LUNCH3
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3
+ DEGREEK    x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x   x   x   x   x   x   x   x   x       x   x
+ DEGREE3
+ LADDERK    x           x   x   x   x   x       x   x       x   x   x
+ LADDER1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDER2    x   x   x   x   x   x   x   x   x   x       x       x   x
+ LADDER3
+ EXPERK     x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x   x   x   x   x   x   x   x   x       x
+ EXPER3
+ TETHNICK   x   x       x   x           x   x   x   x   x   x   x   x
+ TETHNIC1   x   x   x   x       x       x   x   x   x   x   x   x   x
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x   x   x       x   x
+ TETHNIC3
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3
+
+          131 132 133 134 135 136 137 138 139 140 141 142 143 144 145
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3
+ READK      x   x   x   x   x   x   x   x
+ READ1      x   x                           x   x   x   x   x   x   x
+ READ2              x   x                   x   x   x   x   x   x
+ READ3
+ MATHK      x   x   x   x   x   x   x   x   x   x
+ MATH1      x   x   x       x   x           x   x   x   x   x   x   x
+ MATH2              x   x                   x   x   x   x   x
+ MATH3
+ LUNCHK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH1     x   x   x   x   x   x   x       x   x   x   x       x   x
+ LUNCH2             x   x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH3
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3
+ DEGREEK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE1    x   x   x   x   x       x   x   x   x   x   x   x   x   x
+ DEGREE2            x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE3
+ LADDERK    x       x   x   x   x   x   x   x       x       x   x   x
+ LADDER1    x   x   x   x   x       x   x   x   x   x   x   x   x   x
+ LADDER2            x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDER3
+ EXPERK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER1     x   x   x   x   x       x   x   x   x   x   x   x   x   x
+ EXPER2             x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER3
+ TETHNICK   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC1   x   x   x   x   x       x   x   x   x   x   x   x   x   x
+ TETHNIC2           x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC3
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3
+
+          146 147 148 149 150 151 152 153 154 155 156 157 158 159 160
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x
+ STAR3                      x   x   x   x   x   x   x   x   x   x   x
+ READK                      x   x   x   x   x   x   x   x   x
+ READ1      x   x           x   x   x   x                       x
+ READ2
+ READ3                      x   x           x   x   x           x   x
+ MATHK                      x   x   x   x   x   x   x   x   x
+ MATH1      x   x   x       x   x   x   x               x   x   x
+ MATH2
+ MATH3                      x   x   x       x   x   x   x   x   x   x
+ LUNCHK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH1     x   x   x   x   x   x   x   x   x   x       x       x   x
+ LUNCH2     x       x   x
+ LUNCH3                     x   x   x   x   x       x   x   x   x   x
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x
+ SCH3                       x   x   x   x   x   x   x   x   x   x   x
+ DEGREEK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE1    x   x           x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x
+ DEGREE3                    x   x   x   x   x   x   x   x   x   x   x
+ LADDERK        x   x   x   x       x   x   x   x   x   x   x   x   x
+ LADDER1    x   x           x   x   x   x   x   x   x   x   x   x   x
+ LADDER2    x   x   x   x
+ LADDER3                    x   x   x   x   x   x   x   x   x   x   x
+ EXPERK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER1     x   x           x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x
+ EXPER3                     x   x   x   x   x   x   x   x   x   x   x
+ TETHNICK   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC1   x   x           x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC2   x   x   x   x
+ TETHNIC3                   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x
+ SYSTEM3                    x   x   x   x   x   x   x   x   x   x   x
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x
+ SCHID3                     x   x   x   x   x   x   x   x   x   x   x
+
+          161 162 163 164 165 166 167 168 169 170 171 172 173 174 175
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2
+ STAR3
+ READK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READ1      x   x   x   x   x   x   x   x   x   x   x
+ READ2
+ READ3
+ MATHK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ MATH1      x   x   x   x   x   x   x   x               x   x   x   x
+ MATH2
+ MATH3
+ LUNCHK     x   x   x   x   x   x   x       x   x   x   x   x   x   x
+ LUNCH1     x   x   x   x   x               x   x       x   x   x
+ LUNCH2
+ LUNCH3
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2
+ SCH3
+ DEGREEK    x   x   x   x       x   x   x   x   x   x   x   x   x   x
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2
+ DEGREE3
+ LADDERK    x   x   x           x   x   x   x           x   x       x
+ LADDER1    x   x       x   x   x   x   x   x   x   x   x       x   x
+ LADDER2
+ LADDER3
+ EXPERK     x   x   x   x       x   x   x   x   x   x   x   x   x   x
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2
+ EXPER3
+ TETHNICK   x       x   x       x   x       x   x   x   x   x   x   x
+ TETHNIC1   x   x   x   x   x   x           x   x       x   x   x   x
+ TETHNIC2
+ TETHNIC3
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2
+ SYSTEM3
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2
+ SCHID3
+
+          176 177 178 179 180 181 182 183 184 185 186 187 188 189 190
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2
+ STAR3
+ READK      x   x   x   x   x   x
+ READ1                              x   x   x   x   x   x   x
+ READ2
+ READ3
+ MATHK      x   x   x   x   x   x   x   x   x
+ MATH1      x                       x   x   x   x   x   x       x
+ MATH2
+ MATH3
+ LUNCHK         x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LUNCH1         x   x   x           x   x   x   x   x       x   x   x
+ LUNCH2
+ LUNCH3
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2
+ SCH3
+ DEGREEK    x   x   x   x   x   x   x   x       x   x   x   x   x   x
+ DEGREE1    x   x   x       x       x   x   x   x   x   x   x   x   x
+ DEGREE2
+ DEGREE3
+ LADDERK    x   x       x   x   x   x           x               x   x
+ LADDER1    x   x   x       x       x   x   x   x   x   x   x   x   x
+ LADDER2
+ LADDER3
+ EXPERK     x   x   x   x   x   x   x   x       x   x   x   x   x   x
+ EXPER1     x   x   x       x       x   x   x   x   x   x   x   x   x
+ EXPER2
+ EXPER3
+ TETHNICK       x   x   x   x   x   x   x       x   x   x   x   x   x
+ TETHNIC1       x   x       x       x   x   x   x   x   x   x   x   x
+ TETHNIC2
+ TETHNIC3
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2
+ SYSTEM3
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2
+ SCHID3
+
+          191 192 193 194 195 196 197 198 199 200 201 202 203 204 205
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READ1
+ READ2      x   x   x   x   x   x   x   x   x   x   x   x
+ READ3      x   x   x   x   x   x   x                       x   x   x
+ MATHK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ MATH1
+ MATH2      x   x   x   x   x   x   x   x   x   x   x   x
+ MATH3      x   x   x   x   x   x   x                       x   x   x
+ LUNCHK     x   x   x   x   x   x   x   x   x   x   x       x   x   x
+ LUNCH1
+ LUNCH2     x   x   x   x   x           x   x   x   x   x   x   x
+ LUNCH3     x   x   x   x       x   x   x   x               x   x   x
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREEK    x   x   x   x   x   x       x   x   x   x   x   x   x   x
+ DEGREE1
+ DEGREE2    x   x   x   x   x   x   x   x   x   x   x   x   x       x
+ DEGREE3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDERK    x   x   x       x   x       x       x           x       x
+ LADDER1
+ LADDER2    x   x   x   x   x   x   x   x   x   x   x   x   x       x
+ LADDER3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPERK     x   x   x   x   x   x       x   x   x   x   x   x   x   x
+ EXPER1
+ EXPER2     x   x       x   x   x   x   x   x   x   x   x   x       x
+ EXPER3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNICK   x       x   x   x   x       x   x   x   x       x   x   x
+ TETHNIC1
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x   x   x   x       x
+ TETHNIC3   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+
+          206 207 208 209 210 211 212 213 214 215 216 217 218 219 220
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x
+ READK      x   x   x                       x   x   x   x   x   x
+ READ1
+ READ2                  x   x   x           x   x   x   x           x
+ READ3                  x   x
+ MATHK      x   x   x                       x   x   x   x   x   x
+ MATH1
+ MATH2                  x   x   x           x   x   x   x           x
+ MATH3      x           x   x       x
+ LUNCHK     x   x   x   x   x   x   x   x   x   x   x       x   x   x
+ LUNCH1
+ LUNCH2     x   x   x   x   x   x   x   x   x   x       x   x       x
+ LUNCH3     x   x   x   x   x   x   x   x
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x
+ DEGREEK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE1
+ DEGREE2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE3    x   x   x   x   x   x   x   x
+ LADDERK    x   x       x       x   x   x   x       x   x   x   x   x
+ LADDER1
+ LADDER2    x   x   x   x       x   x   x   x   x   x   x   x   x   x
+ LADDER3    x   x   x   x   x   x   x   x
+ EXPERK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER1
+ EXPER2     x   x   x   x       x   x   x   x   x   x   x   x   x   x
+ EXPER3     x   x   x   x   x   x   x   x
+ TETHNICK   x   x   x   x   x   x   x   x   x   x   x       x   x   x
+ TETHNIC1
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC3   x   x   x   x   x   x   x   x
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x
+
+          221 222 223 224 225 226 227 228 229 230 231 232 233 234 235
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR1
+ STAR2      x
+ STAR3          x   x   x   x   x   x   x   x   x
+ READK          x   x   x   x   x   x               x   x   x   x   x
+ READ1
+ READ2      x
+ READ3          x   x   x               x   x   x
+ MATHK          x   x   x   x   x   x               x   x   x   x
+ MATH1
+ MATH2      x
+ MATH3          x   x   x               x   x   x
+ LUNCHK     x   x   x   x   x   x   x   x   x   x   x   x   x       x
+ LUNCH1
+ LUNCH2     x
+ LUNCH3         x   x       x   x       x   x   x
+ SCHK       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH1
+ SCH2       x
+ SCH3           x   x   x   x   x   x   x   x   x
+ DEGREEK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE1
+ DEGREE2    x
+ DEGREE3        x       x   x   x   x   x   x
+ LADDERK        x   x   x   x       x   x           x   x       x   x
+ LADDER1
+ LADDER2    x
+ LADDER3        x       x   x   x   x   x   x
+ EXPERK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER1
+ EXPER2     x
+ EXPER3         x       x   x   x   x   x   x
+ TETHNICK   x   x   x   x   x   x   x   x   x   x   x       x       x
+ TETHNIC1
+ TETHNIC2   x
+ TETHNIC3       x       x   x   x   x   x   x
+ SYSTEMK    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM1
+ SYSTEM2    x
+ SYSTEM3        x   x   x   x   x   x   x   x   x
+ SCHIDK     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID1
+ SCHID2     x
+ SCHID3         x   x   x   x   x   x   x   x   x
+
+          236 237 238 239 240 241 242 243 244 245 246 247 248 249 250
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK      x   x   x   x
+ STAR1                      x   x   x   x   x   x   x   x   x   x   x
+ STAR2                      x   x   x   x   x   x   x   x   x   x   x
+ STAR3                      x   x   x   x   x   x   x   x   x   x   x
+ READK
+ READ1                      x   x   x   x   x   x   x   x   x   x   x
+ READ2                      x   x   x   x   x   x   x   x   x   x   x
+ READ3                      x   x   x   x   x   x   x   x   x   x   x
+ MATHK      x   x
+ MATH1                      x   x   x   x   x   x   x   x   x   x   x
+ MATH2                      x   x   x   x   x   x   x   x   x   x   x
+ MATH3                      x   x   x   x   x   x   x   x   x   x   x
+ LUNCHK     x   x   x   x   x
+ LUNCH1                         x   x   x   x   x   x
+ LUNCH2                     x   x   x   x   x   x       x   x   x
+ LUNCH3                     x   x   x   x   x       x   x   x   x   x
+ SCHK       x   x   x   x
+ SCH1                       x   x   x   x   x   x   x   x   x   x   x
+ SCH2                       x   x   x   x   x   x   x   x   x   x   x
+ SCH3                       x   x   x   x   x   x   x   x   x   x   x
+ DEGREEK    x   x   x   x
+ DEGREE1                    x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2                    x   x   x   x       x   x   x   x   x   x
+ DEGREE3                    x   x   x       x   x   x   x   x       x
+ LADDERK    x       x
+ LADDER1                    x   x   x   x   x   x   x   x   x   x   x
+ LADDER2                    x   x       x       x   x   x   x   x   x
+ LADDER3                    x   x   x       x   x   x   x   x       x
+ EXPERK     x   x   x   x
+ EXPER1                     x   x   x   x   x   x   x   x   x   x   x
+ EXPER2                     x   x   x   x       x   x   x   x   x   x
+ EXPER3                     x   x   x       x   x   x   x   x       x
+ TETHNICK   x   x   x   x
+ TETHNIC1                       x   x   x   x   x   x   x
+ TETHNIC2                   x   x   x   x       x   x   x   x   x   x
+ TETHNIC3                   x   x   x       x   x   x   x   x       x
+ SYSTEMK    x   x   x   x
+ SYSTEM1                    x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2                    x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3                    x   x   x   x   x   x   x   x   x   x   x
+ SCHIDK     x   x   x   x
+ SCHID1                     x   x   x   x   x   x   x   x   x   x   x
+ SCHID2                     x   x   x   x   x   x   x   x   x   x   x
+ SCHID3                     x   x   x   x   x   x   x   x   x   x   x
+
+          251 252 253 254 255 256 257 258 259 260 261 262 263 264 265
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READK
+ READ1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READ2      x   x   x   x   x   x   x   x
+ READ3      x   x   x                       x   x   x   x   x
+ MATHK
+ MATH1      x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ MATH2      x       x   x   x   x   x   x   x                   x
+ MATH3          x   x   x                   x   x   x   x   x
+ LUNCHK
+ LUNCH1     x   x   x   x   x   x   x       x   x   x   x       x   x
+ LUNCH2     x   x   x   x   x   x       x   x   x   x       x   x   x
+ LUNCH3     x   x   x   x   x       x   x   x   x   x   x       x   x
+ SCHK
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREEK
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x   x   x   x   x   x   x       x   x   x   x
+ DEGREE3    x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ LADDERK
+ LADDER1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDER2    x   x   x   x   x   x   x   x   x   x       x   x   x   x
+ LADDER3    x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ EXPERK
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x   x   x   x   x   x   x       x   x   x   x
+ EXPER3     x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNICK
+ TETHNIC1   x   x   x   x   x   x   x   x   x   x   x   x       x   x
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x       x   x   x   x
+ TETHNIC3   x   x       x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEMK
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHIDK
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+
+          266 267 268 269 270 271 272 273 274 275 276 277 278 279 280
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READK
+ READ1      x   x   x
+ READ2                  x   x   x   x   x   x   x   x   x   x   x
+ READ3                  x   x   x   x   x   x   x                   x
+ MATHK
+ MATH1      x   x   x   x   x   x                   x   x   x       x
+ MATH2                  x   x       x   x   x   x   x   x   x   x
+ MATH3                  x   x   x   x   x   x   x                   x
+ LUNCHK
+ LUNCH1     x   x   x   x   x   x   x   x   x   x   x   x       x   x
+ LUNCH2     x           x           x   x   x   x   x   x   x   x
+ LUNCH3         x       x   x   x   x   x   x       x       x   x   x
+ SCHK
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREEK
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDERK
+ LADDER1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDER2    x   x   x   x   x   x   x   x       x   x   x   x   x   x
+ LADDER3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPERK
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x   x   x   x       x   x   x   x   x   x   x
+ EXPER3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNICK
+ TETHNIC1   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC3   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEMK
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHIDK
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+
+          281 282 283 284 285 286 287 288 289 290 291 292 293 294 295
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x
+ READK
+ READ1                                      x   x   x   x   x   x   x
+ READ2                                      x   x   x   x   x   x   x
+ READ3      x   x
+ MATHK
+ MATH1              x   x   x               x   x   x   x   x   x   x
+ MATH2                                      x   x   x   x   x   x   x
+ MATH3      x   x   x   x       x
+ LUNCHK
+ LUNCH1     x   x   x       x   x   x   x   x   x   x   x   x   x
+ LUNCH2     x   x   x   x   x   x   x   x   x   x   x   x   x       x
+ LUNCH3     x   x   x   x   x   x   x   x
+ SCHK
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x
+ DEGREEK
+ DEGREE1    x   x   x   x   x   x   x       x   x   x   x   x   x   x
+ DEGREE2    x       x   x   x   x   x   x   x   x   x   x       x   x
+ DEGREE3    x   x   x   x   x   x   x   x
+ LADDERK
+ LADDER1    x   x   x   x   x   x   x       x   x   x       x   x   x
+ LADDER2    x       x   x   x   x   x   x   x   x       x       x   x
+ LADDER3    x   x   x   x   x   x   x   x
+ EXPERK
+ EXPER1     x   x   x   x   x   x   x       x   x   x   x   x   x   x
+ EXPER2     x       x   x   x   x   x   x   x       x   x       x   x
+ EXPER3     x   x   x   x   x   x   x   x
+ TETHNICK
+ TETHNIC1   x   x   x   x   x   x   x       x   x   x   x   x   x   x
+ TETHNIC2   x       x   x   x   x   x   x   x   x   x   x       x   x
+ TETHNIC3   x   x   x   x   x   x   x   x
+ SYSTEMK
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x
+ SCHIDK
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x
+
+          296 297 298 299 300 301 302 303 304 305 306 307 308 309 310
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3
+ READK
+ READ1      x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READ2      x   x   x   x                                           x
+ READ3
+ MATHK
+ MATH1      x   x   x       x   x   x   x   x   x   x   x   x       x
+ MATH2      x   x       x   x   x                                   x
+ MATH3
+ LUNCHK
+ LUNCH1             x   x   x   x   x   x   x                   x   x
+ LUNCH2     x       x   x   x   x   x   x       x   x           x   x
+ LUNCH3
+ SCHK
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3
+ DEGREEK
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE3
+ LADDERK
+ LADDER1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDER2    x   x   x   x   x       x       x   x   x   x   x   x   x
+ LADDER3
+ EXPERK
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER3
+ TETHNICK
+ TETHNIC1       x   x   x   x   x   x   x   x   x       x       x   x
+ TETHNIC2   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNIC3
+ SYSTEMK
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3
+ SCHIDK
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3
+
+          311 312 313 314 315 316 317 318 319 320 321 322 323 324 325
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR2      x   x   x   x   x
+ STAR3                          x   x   x   x   x
+ READK
+ READ1                          x   x   x   x       x   x   x   x
+ READ2      x   x
+ READ3                          x   x           x
+ MATHK
+ MATH1              x           x   x   x   x       x   x   x   x   x
+ MATH2      x   x
+ MATH3                          x   x           x
+ LUNCHK
+ LUNCH1     x   x   x   x   x   x       x   x   x   x   x           x
+ LUNCH2     x       x   x
+ LUNCH3                         x   x   x       x
+ SCHK
+ SCH1       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH2       x   x   x   x   x
+ SCH3                           x   x   x   x   x
+ DEGREEK
+ DEGREE1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREE2    x   x   x   x   x
+ DEGREE3                        x   x   x   x   x
+ LADDERK
+ LADDER1    x   x   x   x   x   x   x   x   x   x   x       x   x   x
+ LADDER2    x   x   x   x   x
+ LADDER3                        x   x   x   x   x
+ EXPERK
+ EXPER1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPER2     x   x   x   x
+ EXPER3                         x   x   x   x   x
+ TETHNICK
+ TETHNIC1   x   x   x   x   x   x   x   x   x   x   x   x   x       x
+ TETHNIC2   x   x   x   x   x
+ TETHNIC3                       x   x   x   x   x
+ SYSTEMK
+ SYSTEM1    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM2    x   x   x   x   x
+ SYSTEM3                        x   x   x   x   x
+ SCHIDK
+ SCHID1     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID2     x   x   x   x   x
+ SCHID3                         x   x   x   x   x
+
+          326 327 328 329 330 331 332 333 334 335 336 337 338 339 340
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1      x   x   x   x   x
+ STAR2                          x   x   x   x   x   x   x   x   x   x
+ STAR3                          x   x   x   x   x   x   x   x   x   x
+ READK
+ READ1
+ READ2                          x   x   x   x   x   x   x   x   x   x
+ READ3                          x   x   x   x   x   x   x   x   x   x
+ MATHK
+ MATH1      x   x
+ MATH2                          x   x   x   x   x   x   x   x   x   x
+ MATH3                          x   x   x   x   x   x   x   x   x
+ LUNCHK
+ LUNCH1     x       x   x
+ LUNCH2                         x   x   x   x   x   x   x           x
+ LUNCH3                         x   x   x   x   x   x       x       x
+ SCHK
+ SCH1       x   x   x   x   x
+ SCH2                           x   x   x   x   x   x   x   x   x   x
+ SCH3                           x   x   x   x   x   x   x   x   x   x
+ DEGREEK
+ DEGREE1        x   x   x   x
+ DEGREE2                        x   x   x   x   x       x   x   x   x
+ DEGREE3                        x   x   x   x       x   x   x   x   x
+ LADDERK
+ LADDER1        x   x       x
+ LADDER2                        x   x           x       x   x   x   x
+ LADDER3                        x   x   x   x       x   x   x   x   x
+ EXPERK
+ EXPER1         x   x   x   x
+ EXPER2                         x       x       x       x   x   x   x
+ EXPER3                         x   x   x   x       x   x   x   x   x
+ TETHNICK
+ TETHNIC1       x   x   x   x
+ TETHNIC2                       x   x   x   x   x       x   x   x   x
+ TETHNIC3                       x   x   x   x       x   x   x   x   x
+ SYSTEMK
+ SYSTEM1    x   x   x   x   x
+ SYSTEM2                        x   x   x   x   x   x   x   x   x   x
+ SYSTEM3                        x   x   x   x   x   x   x   x   x   x
+ SCHIDK
+ SCHID1     x   x   x   x   x
+ SCHID2                         x   x   x   x   x   x   x   x   x   x
+ SCHID3                         x   x   x   x   x   x   x   x   x   x
+
+          341 342 343 344 345 346 347 348 349 350 351 352 353 354 355
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ READK
+ READ1
+ READ2      x   x   x   x   x   x   x   x   x
+ READ3      x   x                               x   x   x   x   x   x
+ MATHK
+ MATH1
+ MATH2              x   x   x   x   x   x   x   x
+ MATH3      x   x   x                           x   x   x   x   x   x
+ LUNCHK
+ LUNCH1
+ LUNCH2     x   x   x   x   x   x   x           x   x   x   x   x
+ LUNCH3     x   x   x   x   x   x       x       x   x   x   x       x
+ SCHK
+ SCH1
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ DEGREEK
+ DEGREE1
+ DEGREE2    x       x   x   x       x   x   x   x   x   x       x   x
+ DEGREE3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ LADDERK
+ LADDER1
+ LADDER2    x       x   x           x   x   x   x   x   x       x   x
+ LADDER3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ EXPERK
+ EXPER1
+ EXPER2     x       x   x           x   x   x   x   x           x   x
+ EXPER3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ TETHNICK
+ TETHNIC1
+ TETHNIC2   x       x   x   x       x   x   x   x   x   x       x   x
+ TETHNIC3   x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEMK
+ SYSTEM1
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHIDK
+ SCHID1
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+
+          356 357 358 359 360 361 362 363 364 365 366 367 368 369 370
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1
+ STAR2      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STAR3      x   x   x   x   x
+ READK
+ READ1
+ READ2                          x   x   x   x   x   x   x   x   x
+ READ3      x
+ MATHK
+ MATH1
+ MATH2                          x   x   x   x   x   x               x
+ MATH3          x
+ LUNCHK
+ LUNCH1
+ LUNCH2     x   x   x   x       x   x   x   x   x       x   x       x
+ LUNCH3     x   x   x       x
+ SCHK
+ SCH1
+ SCH2       x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCH3       x   x   x   x   x
+ DEGREEK
+ DEGREE1
+ DEGREE2    x   x   x   x   x   x   x   x   x       x   x   x   x   x
+ DEGREE3    x   x   x   x   x
+ LADDERK
+ LADDER1
+ LADDER2    x   x   x   x   x   x   x               x   x   x   x   x
+ LADDER3    x   x   x   x   x
+ EXPERK
+ EXPER1
+ EXPER2     x   x   x   x   x   x       x           x   x       x   x
+ EXPER3     x   x   x   x   x
+ TETHNICK
+ TETHNIC1
+ TETHNIC2   x   x   x   x   x   x   x   x   x       x   x   x   x   x
+ TETHNIC3   x   x   x   x   x
+ SYSTEMK
+ SYSTEM1
+ SYSTEM2    x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SYSTEM3    x   x   x   x   x
+ SCHIDK
+ SCHID1
+ SCHID2     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ SCHID3     x   x   x   x   x
+
+          371 372 373 374 375 376 377 378 379 380 381 382 383 384 385
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ STARK
+ STAR1
+ STAR2      x   x   x   x   x   x
+ STAR3                              x   x   x   x   x   x   x   x   x
+ READK
+ READ1
+ READ2
+ READ3                              x   x   x   x   x   x
+ MATHK
+ MATH1
+ MATH2
+ MATH3                              x   x   x   x   x       x
+ LUNCHK
+ LUNCH1
+ LUNCH2     x   x   x   x
+ LUNCH3                             x   x   x           x   x   x   x
+ SCHK
+ SCH1
+ SCH2       x   x   x   x   x   x
+ SCH3                               x   x   x   x   x   x   x   x   x
+ DEGREEK
+ DEGREE1
+ DEGREE2    x   x   x       x
+ DEGREE3                            x           x       x   x   x
+ LADDERK
+ LADDER1
+ LADDER2    x               x
+ LADDER3                            x   x       x       x   x   x
+ EXPERK
+ EXPER1
+ EXPER2     x   x           x
+ EXPER3                             x   x       x       x   x   x
+ TETHNICK
+ TETHNIC1
+ TETHNIC2   x   x   x       x
+ TETHNIC3                           x   x       x       x   x   x
+ SYSTEMK
+ SYSTEM1
+ SYSTEM2    x   x   x   x   x   x
+ SYSTEM3                            x   x   x   x   x   x   x   x   x
+ SCHIDK
+ SCHID1
+ SCHID2     x   x   x   x   x   x
+ SCHID3                             x   x   x   x   x   x   x   x   x
+
+          386 387 388 389 390 391 392 393 394 395 396 397 398 399 400
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC     x   x   x   x   x   x   x   x   x   x   x
+ BIRTH      x   x                                       x   x   x   x
+ STARK              x   x
+ STAR1                      x   x   x                   x   x
+ STAR2                      x           x   x                   x   x
+ STAR3      x   x           x           x       x   x           x
+ READK              x
+ READ1                      x   x                       x
+ READ2                      x           x                       x   x
+ READ3                      x           x
+ MATHK              x
+ MATH1                      x   x                       x
+ MATH2                      x           x                       x   x
+ MATH3                      x           x
+ LUNCHK             x
+ LUNCH1                     x   x   x                   x   x
+ LUNCH2                     x           x   x                   x   x
+ LUNCH3                     x           x       x               x
+ SCHK               x   x
+ SCH1                       x   x   x                   x   x
+ SCH2                       x           x   x                   x   x
+ SCH3       x   x           x           x       x   x           x
+ DEGREEK            x   x
+ DEGREE1                    x   x   x                   x   x
+ DEGREE2                    x           x   x                   x   x
+ DEGREE3    x               x           x       x   x           x
+ LADDERK            x   x
+ LADDER1                    x   x   x                   x   x
+ LADDER2                                x   x                   x   x
+ LADDER3    x               x           x       x   x           x
+ EXPERK             x   x
+ EXPER1                     x   x   x                   x   x
+ EXPER2                     x           x   x                   x   x
+ EXPER3     x               x           x       x   x           x
+ TETHNICK           x   x
+ TETHNIC1                   x   x   x                   x   x
+ TETHNIC2                   x           x   x                   x   x
+ TETHNIC3   x               x           x       x   x           x
+ SYSTEMK            x   x
+ SYSTEM1                    x   x   x                   x   x
+ SYSTEM2                    x           x   x                   x   x
+ SYSTEM3    x   x           x           x       x   x           x
+ SCHIDK             x   x
+ SCHID1                     x   x   x                   x   x
+ SCHID2                     x           x   x                   x   x
+ SCHID3     x   x           x           x       x   x           x
+
+          401 402 403 404 405 406 407 408 409 410 411 412 413 414 415
+ GENDER     x   x   x   x   x   x   x   x   x   x   x   x   x   x   x
+ ETHNIC
+ BIRTH      x   x   x   x   x   x   x   x   x   x
+ STARK                                              x   x
+ STAR1                                                      x   x   x
+ STAR2      x   x   x   x   x   x   x
+ STAR3                                  x   x   x
+ READK                                              x
+ READ1                                                      x
+ READ2      x   x   x
+ READ3                                  x   x
+ MATHK                                              x
+ MATH1                                                      x
+ MATH2      x   x   x
+ MATH3                                  x
+ LUNCHK                                             x
+ LUNCH1                                                     x   x   x
+ LUNCH2     x   x       x   x   x
+ LUNCH3                                 x   x   x
+ SCHK                                               x   x
+ SCH1                                                       x   x   x
+ SCH2       x   x   x   x   x   x   x
+ SCH3                                   x   x   x
+ DEGREEK                                            x   x
+ DEGREE1                                                    x   x
+ DEGREE2    x   x   x   x   x       x
+ DEGREE3                                x   x   x
+ LADDERK                                            x   x
+ LADDER1                                                    x   x
+ LADDER2    x       x   x           x
+ LADDER3                                x   x   x
+ EXPERK                                             x   x
+ EXPER1                                                     x   x
+ EXPER2         x   x   x   x       x
+ EXPER3                                 x   x   x
+ TETHNICK                                           x   x
+ TETHNIC1                                                   x   x
+ TETHNIC2   x   x   x   x   x       x
+ TETHNIC3                               x   x   x
+ SYSTEMK                                            x   x
+ SYSTEM1                                                    x   x   x
+ SYSTEM2    x   x   x   x   x   x   x
+ SYSTEM3                                x   x   x
+ SCHIDK                                             x   x
+ SCHID1                                                     x   x   x
+ SCHID2     x   x   x   x   x   x   x
+ SCHID3                                 x   x   x
+
+          416 417 418 419 420 421 422 423
+ GENDER     x   x   x
+ ETHNIC
+ BIRTH                  x   x
+ STARK
+ STAR1                          x   x   x
+ STAR2      x   x       x   x
+ STAR3              x
+ READK
+ READ1
+ READ2                  x
+ READ3
+ MATHK
+ MATH1
+ MATH2                  x
+ MATH3
+ LUNCHK
+ LUNCH1                         x   x
+ LUNCH2     x               x
+ LUNCH3             x
+ SCHK
+ SCH1                           x   x   x
+ SCH2       x   x       x   x
+ SCH3               x
+ DEGREEK
+ DEGREE1                        x       x
+ DEGREE2    x   x       x   x
+ DEGREE3            x
+ LADDERK
+ LADDER1                        x       x
+ LADDER2    x   x       x   x
+ LADDER3            x
+ EXPERK
+ EXPER1                         x       x
+ EXPER2     x   x       x   x
+ EXPER3             x
+ TETHNICK
+ TETHNIC1                       x       x
+ TETHNIC2   x   x       x   x
+ TETHNIC3           x
+ SYSTEMK
+ SYSTEM1                        x   x   x
+ SYSTEM2    x   x       x   x
+ SYSTEM3            x
+ SCHIDK
+ SCHID1                         x   x   x
+ SCHID2     x   x       x   x
+ SCHID3             x
+
+
+     MISSING DATA PATTERN FREQUENCIES
+
+    Pattern   Frequency     Pattern   Frequency     Pattern   Frequency
+          1        2161         142           2         283          17
+          2          10         143           1         284           2
+          3           2         144           1         285           2
+          4           8         145           2         286           2
+          5           1         146           2         287           4
+          6         167         147           2         288           1
+          7          11         148           1         289         203
+          8          14         149           1         290           3
+          9          13         150          24         291           2
+         10           1         151           5         292           2
+         11           1         152           1         293           2
+         12          62         153           3         294           8
+         13           2         154           4         295           7
+         14          79         155           1         296           2
+         15          15         156           1         297           1
+         16          14         157           1         298           3
+         17          13         158           1         299           2
+         18          34         159           3         300           2
+         19           9         160           1         301           1
+         20           2         161         656         302          45
+         21           1         162           1         303           1
+         22           1         163           5         304          21
+         23          13         164          79         305           1
+         24           1         165           4         306           1
+         25           1         166          18         307           1
+         26           3         167           2         308           1
+         27           2         168           1         309           1
+         28           3         169           2         310           6
+         29           1         170           1         311           9
+         30           1         171           1         312           1
+         31           2         172          26         313           6
+         32           1         173           1         314           6
+         33           2         174           1         315           1
+         34          72         175           1         316          20
+         35           1         176           1         317           1
+         36           1         177          32         318           6
+         37           1         178           4         319           1
+         38          16         179           1         320           4
+         39           1         180           3         321         639
+         40           1         181           1         322           7
+         41           3         182           9         323          18
+         42           2         183           2         324           2
+         43           1         184           1         325          22
+         44           1         185          52         326           1
+         45          28         186          10         327           1
+         46           3         187           1         328          46
+         47           2         188           1         329           2
+         48           2         189           1         330           4
+         49           1         190           4         331         745
+         50           6         191          31         332           2
+         51           1         192           1         333           4
+         52           1         193           1         334          13
+         53          17         194           3         335           8
+         54           1         195           8         336          10
+         55           1         196           4         337          22
+         56           1         197           1         338          24
+         57           6         198           2         339           1
+         58           1         199           2         340           2
+         59           1         200           1         341           3
+         60           1         201           1         342           1
+         61           1         202           1         343           1
+         62          10         203           7         344          75
+         63           2         204           1         345           2
+         64           1         205           1         346           2
+         65           1         206           1         347          12
+         66           1         207           1         348           1
+         67           2         208           1         349           1
+         68           1         209           2         350           4
+         69          27         210           1         351         103
+         70           9         211           1         352           1
+         71           6         212           1         353           1
+         72           1         213           1         354           5
+         73           2         214          22         355           3
+         74           1         215           5         356           3
+         75           4         216           2         357          10
+         76          19         217           1         358          25
+         77           1         218           3         359           6
+         78           1         219           1         360           1
+         79           2         220           3         361         293
+         80           1         221           1         362           2
+         81           1         222          15         363           3
+         82         121         223           1         364           2
+         83           1         224           2         365           1
+         84          14         225           5         366           8
+         85           1         226           1         367           3
+         86           1         227           1         368           1
+         87           1         228           3         369           1
+         88           1         229           1         370           2
+         89           3         230           1         371         134
+         90           1         231        1287         372           2
+         91           1         232           8         373           1
+         92           1         233         157         374           3
+         93           1         234           1         375          33
+         94           1         235           2         376           1
+         95           1         236          24         377         930
+         96           1         237          15         378           3
+         97           1         238         146         379          15
+         98           6         239          19         380          38
+         99           1         240           1         381           1
+        100           1         241         835         382           6
+        101           1         242           1         383          21
+        102           1         243           5         384         191
+        103           1         244           6         385           1
+        104           1         245          14         386          39
+        105           1         246          34         387           1
+        106           1         247          16         388           3
+        107           1         248           6         389           2
+        108           1         249           1         390           1
+        109         289         250           2         391           1
+        110           1         251           4         392           9
+        111           4         252           5         393           2
+        112           4         253           1         394           2
+        113           1         254           3         395          14
+        114          36         255          77         396           2
+        115           5         256          14         397           1
+        116          13         257           5         398           2
+        117           2         258           3         399           1
+        118           1         259           2         400           8
+        119           3         260          14         401           1
+        120           1         261           1         402           1
+        121           1         262           3         403           8
+        122           1         263           1         404          61
+        123           2         264           2         405           1
+        124           1         265          15         406           1
+        125          31         266           3         407           2
+        126           1         267           2         408          11
+        127           3         268           1         409           1
+        128           2         269          22         410           5
+        129           8         270           1         411           1
+        130           1         271           1         412           2
+        131           1         272           8         413           1
+        132           1         273           1         414          11
+        133           5         274           1         415           1
+        134           2         275           1         416           2
+        135           4         276          10         417           1
+        136           1         277           2         418           2
+        137           2         278           1         419           2
+        138           1         279           4         420           5
+        139           6         280           1         421          11
+        140           1         281           1         422           1
+        141          17         282           1         423           1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              GENDER        ETHNIC        BIRTH         STARK         STAR1
+              ________      ________      ________      ________      ________
+ GENDER         0.998
+ ETHNIC         0.987         0.987
+ BIRTH          0.993         0.984         0.994
+ STARK          0.545         0.545         0.545         0.545
+ STAR1          0.588         0.586         0.586         0.389         0.589
+ STAR2          0.589         0.582         0.589         0.316         0.435
+ STAR3          0.586         0.585         0.585         0.279         0.373
+ READK          0.499         0.499         0.499         0.499         0.362
+ READ1          0.551         0.551         0.551         0.372         0.551
+ READ2          0.524         0.522         0.524         0.300         0.407
+ READ3          0.517         0.516         0.517         0.261         0.341
+ MATHK          0.506         0.506         0.506         0.506         0.366
+ MATH1          0.569         0.569         0.569         0.381         0.569
+ MATH2          0.523         0.521         0.523         0.299         0.406
+ MATH3          0.524         0.523         0.524         0.264         0.346
+ LUNCHK         0.543         0.543         0.543         0.543         0.388
+ LUNCH1         0.572         0.571         0.570         0.380         0.573
+ LUNCH2         0.560         0.553         0.559         0.301         0.414
+ LUNCH3         0.562         0.560         0.561         0.269         0.361
+ SCHK           0.545         0.545         0.545         0.545         0.389
+ SCH1           0.588         0.586         0.586         0.389         0.589
+ SCH2           0.589         0.582         0.589         0.316         0.435
+ SCH3           0.586         0.585         0.585         0.279         0.373
+ DEGREEK        0.544         0.543         0.543         0.544         0.388
+ DEGREE1        0.586         0.585         0.584         0.388         0.587
+ DEGREE2        0.584         0.576         0.584         0.313         0.432
+ DEGREE3        0.581         0.579         0.579         0.276         0.370
+ LADDERK        0.494         0.494         0.493         0.494         0.356
+ LADDER1        0.584         0.583         0.582         0.387         0.585
+ LADDER2        0.579         0.572         0.579         0.311         0.429
+ LADDER3        0.582         0.580         0.580         0.277         0.371
+ EXPERK         0.544         0.543         0.543         0.544         0.388
+ EXPER1         0.586         0.585         0.584         0.388         0.587
+ EXPER2         0.580         0.573         0.580         0.312         0.431
+ EXPER3         0.582         0.580         0.580         0.277         0.371
+ TETHNICK       0.540         0.540         0.539         0.540         0.385
+ TETHNIC1       0.583         0.582         0.581         0.387         0.584
+ TETHNIC2       0.584         0.576         0.584         0.313         0.432
+ TETHNIC3       0.582         0.580         0.580         0.277         0.371
+ SYSTEMK        0.545         0.545         0.545         0.545         0.389
+ SYSTEM1        0.588         0.586         0.586         0.389         0.589
+ SYSTEM2        0.589         0.582         0.589         0.316         0.435
+ SYSTEM3        0.586         0.585         0.585         0.279         0.373
+ SCHIDK         0.545         0.545         0.545         0.545         0.389
+ SCHID1         0.588         0.586         0.586         0.389         0.589
+ SCHID2         0.589         0.582         0.589         0.316         0.435
+ SCHID3         0.586         0.585         0.585         0.279         0.373
+
+
+           Covariance Coverage
+              STAR2         STAR3         READK         READ1         READ2
+              ________      ________      ________      ________      ________
+ STAR2          0.590
+ STAR3          0.467         0.586
+ READK          0.295         0.261         0.499
+ READ1          0.415         0.356         0.346         0.551
+ READ2          0.524         0.436         0.280         0.396         0.524
+ READ3          0.423         0.517         0.244         0.334         0.406
+ MATHK          0.298         0.263         0.499         0.350         0.283
+ MATH1          0.428         0.367         0.355         0.550         0.402
+ MATH2          0.523         0.436         0.280         0.395         0.522
+ MATH3          0.428         0.524         0.247         0.333         0.405
+ LUNCHK         0.314         0.278         0.498         0.370         0.298
+ LUNCH1         0.425         0.364         0.354         0.538         0.398
+ LUNCH2         0.560         0.448         0.281         0.394         0.502
+ LUNCH3         0.450         0.562         0.251         0.344         0.421
+ SCHK           0.316         0.279         0.499         0.372         0.300
+ SCH1           0.435         0.373         0.362         0.551         0.407
+ SCH2           0.590         0.467         0.295         0.415         0.524
+ SCH3           0.467         0.586         0.261         0.356         0.436
+ DEGREEK        0.314         0.278         0.497         0.370         0.298
+ DEGREE1        0.434         0.372         0.361         0.551         0.407
+ DEGREE2        0.584         0.463         0.293         0.412         0.520
+ DEGREE3        0.463         0.581         0.259         0.353         0.432
+ LADDERK        0.290         0.258         0.454         0.339         0.275
+ LADDER1        0.433         0.371         0.360         0.550         0.406
+ LADDER2        0.579         0.460         0.291         0.410         0.516
+ LADDER3        0.464         0.582         0.260         0.354         0.434
+ EXPERK         0.314         0.278         0.497         0.370         0.298
+ EXPER1         0.434         0.372         0.361         0.551         0.407
+ EXPER2         0.581         0.461         0.292         0.411         0.517
+ EXPER3         0.464         0.582         0.260         0.354         0.434
+ TETHNICK       0.312         0.275         0.494         0.368         0.296
+ TETHNIC1       0.432         0.370         0.360         0.549         0.405
+ TETHNIC2       0.584         0.463         0.293         0.412         0.520
+ TETHNIC3       0.464         0.582         0.260         0.354         0.434
+ SYSTEMK        0.316         0.279         0.499         0.372         0.300
+ SYSTEM1        0.435         0.373         0.362         0.551         0.407
+ SYSTEM2        0.590         0.467         0.295         0.415         0.524
+ SYSTEM3        0.467         0.586         0.261         0.356         0.436
+ SCHIDK         0.316         0.279         0.499         0.372         0.300
+ SCHID1         0.435         0.373         0.362         0.551         0.407
+ SCHID2         0.590         0.467         0.295         0.415         0.524
+ SCHID3         0.467         0.586         0.261         0.356         0.436
+
+
+           Covariance Coverage
+              READ3         MATHK         MATH1         MATH2         MATH3
+              ________      ________      ________      ________      ________
+ READ3          0.517
+ MATHK          0.246         0.506
+ MATH1          0.337         0.359         0.569
+ MATH2          0.405         0.283         0.402         0.523
+ MATH3          0.514         0.249         0.341         0.404         0.524
+ LUNCHK         0.260         0.505         0.380         0.298         0.263
+ LUNCH1         0.334         0.358         0.555         0.397         0.338
+ LUNCH2         0.405         0.284         0.407         0.501         0.411
+ LUNCH3         0.502         0.253         0.355         0.420         0.509
+ SCHK           0.261         0.506         0.381         0.299         0.264
+ SCH1           0.341         0.366         0.569         0.406         0.346
+ SCH2           0.423         0.298         0.428         0.523         0.428
+ SCH3           0.517         0.263         0.367         0.436         0.524
+ DEGREEK        0.259         0.504         0.380         0.298         0.262
+ DEGREE1        0.341         0.365         0.568         0.406         0.345
+ DEGREE2        0.420         0.295         0.425         0.519         0.425
+ DEGREE3        0.512         0.261         0.364         0.432         0.518
+ LADDERK        0.240         0.460         0.349         0.275         0.243
+ LADDER1        0.341         0.364         0.566         0.405         0.344
+ LADDER2        0.416         0.293         0.423         0.514         0.422
+ LADDER3        0.513         0.262         0.365         0.433         0.520
+ EXPERK         0.259         0.504         0.380         0.298         0.262
+ EXPER1         0.341         0.365         0.568         0.406         0.345
+ EXPER2         0.418         0.295         0.424         0.516         0.423
+ EXPER3         0.513         0.262         0.365         0.433         0.520
+ TETHNICK       0.257         0.501         0.377         0.295         0.261
+ TETHNIC1       0.339         0.364         0.565         0.404         0.343
+ TETHNIC2       0.420         0.295         0.425         0.519         0.425
+ TETHNIC3       0.513         0.262         0.365         0.433         0.520
+ SYSTEMK        0.261         0.506         0.381         0.299         0.264
+ SYSTEM1        0.341         0.366         0.569         0.406         0.346
+ SYSTEM2        0.423         0.298         0.428         0.523         0.428
+ SYSTEM3        0.517         0.263         0.367         0.436         0.524
+ SCHIDK         0.261         0.506         0.381         0.299         0.264
+ SCHID1         0.341         0.366         0.569         0.406         0.346
+ SCHID2         0.423         0.298         0.428         0.523         0.428
+ SCHID3         0.517         0.263         0.367         0.436         0.524
+
+
+           Covariance Coverage
+              LUNCHK        LUNCH1        LUNCH2        LUNCH3        SCHK
+              ________      ________      ________      ________      ________
+ LUNCHK         0.543
+ LUNCH1         0.380         0.573
+ LUNCH2         0.299         0.404         0.560
+ LUNCH3         0.268         0.352         0.432         0.562
+ SCHK           0.543         0.380         0.301         0.269         0.545
+ SCH1           0.388         0.573         0.414         0.361         0.389
+ SCH2           0.314         0.425         0.560         0.450         0.316
+ SCH3           0.278         0.364         0.448         0.562         0.279
+ DEGREEK        0.541         0.379         0.301         0.267         0.544
+ DEGREE1        0.387         0.572         0.413         0.360         0.388
+ DEGREE2        0.312         0.422         0.555         0.446         0.313
+ DEGREE3        0.275         0.361         0.444         0.557         0.276
+ LADDERK        0.492         0.347         0.278         0.248         0.494
+ LADDER1        0.386         0.570         0.412         0.359         0.387
+ LADDER2        0.310         0.420         0.550         0.443         0.311
+ LADDER3        0.276         0.362         0.445         0.558         0.277
+ EXPERK         0.541         0.379         0.301         0.267         0.544
+ EXPER1         0.387         0.572         0.413         0.360         0.388
+ EXPER2         0.311         0.420         0.552         0.444         0.312
+ EXPER3         0.276         0.362         0.445         0.558         0.277
+ TETHNICK       0.540         0.377         0.298         0.265         0.540
+ TETHNIC1       0.386         0.572         0.411         0.358         0.387
+ TETHNIC2       0.312         0.422         0.555         0.446         0.313
+ TETHNIC3       0.276         0.362         0.445         0.558         0.277
+ SYSTEMK        0.543         0.380         0.301         0.269         0.545
+ SYSTEM1        0.388         0.573         0.414         0.361         0.389
+ SYSTEM2        0.314         0.425         0.560         0.450         0.316
+ SYSTEM3        0.278         0.364         0.448         0.562         0.279
+ SCHIDK         0.543         0.380         0.301         0.269         0.545
+ SCHID1         0.388         0.573         0.414         0.361         0.389
+ SCHID2         0.314         0.425         0.560         0.450         0.316
+ SCHID3         0.278         0.364         0.448         0.562         0.279
+
+
+           Covariance Coverage
+              SCH1          SCH2          SCH3          DEGREEK       DEGREE1
+              ________      ________      ________      ________      ________
+ SCH1           0.589
+ SCH2           0.435         0.590
+ SCH3           0.373         0.467         0.586
+ DEGREEK        0.388         0.314         0.278         0.544
+ DEGREE1        0.587         0.434         0.372         0.386         0.587
+ DEGREE2        0.432         0.584         0.463         0.312         0.431
+ DEGREE3        0.370         0.463         0.581         0.275         0.369
+ LADDERK        0.356         0.290         0.258         0.494         0.355
+ LADDER1        0.585         0.433         0.371         0.385         0.585
+ LADDER2        0.429         0.579         0.460         0.310         0.428
+ LADDER3        0.371         0.464         0.582         0.276         0.370
+ EXPERK         0.388         0.314         0.278         0.544         0.386
+ EXPER1         0.587         0.434         0.372         0.386         0.587
+ EXPER2         0.431         0.581         0.461         0.311         0.429
+ EXPER3         0.371         0.464         0.582         0.276         0.370
+ TETHNICK       0.385         0.312         0.275         0.540         0.384
+ TETHNIC1       0.584         0.432         0.370         0.385         0.584
+ TETHNIC2       0.432         0.584         0.463         0.312         0.431
+ TETHNIC3       0.371         0.464         0.582         0.276         0.370
+ SYSTEMK        0.389         0.316         0.279         0.544         0.388
+ SYSTEM1        0.589         0.435         0.373         0.388         0.587
+ SYSTEM2        0.435         0.590         0.467         0.314         0.434
+ SYSTEM3        0.373         0.467         0.586         0.278         0.372
+ SCHIDK         0.389         0.316         0.279         0.544         0.388
+ SCHID1         0.589         0.435         0.373         0.388         0.587
+ SCHID2         0.435         0.590         0.467         0.314         0.434
+ SCHID3         0.373         0.467         0.586         0.278         0.372
+
+
+           Covariance Coverage
+              DEGREE2       DEGREE3       LADDERK       LADDER1       LADDER2
+              ________      ________      ________      ________      ________
+ DEGREE2        0.584
+ DEGREE3        0.459         0.581
+ LADDERK        0.288         0.255         0.494
+ LADDER1        0.430         0.368         0.354         0.585
+ LADDER2        0.579         0.456         0.286         0.428         0.579
+ LADDER3        0.460         0.581         0.256         0.369         0.457
+ EXPERK         0.312         0.275         0.494         0.385         0.310
+ EXPER1         0.431         0.369         0.355         0.585         0.428
+ EXPER2         0.581         0.457         0.287         0.429         0.578
+ EXPER3         0.460         0.581         0.256         0.369         0.457
+ TETHNICK       0.309         0.273         0.491         0.383         0.307
+ TETHNIC1       0.428         0.367         0.354         0.582         0.426
+ TETHNIC2       0.584         0.459         0.288         0.430         0.579
+ TETHNIC3       0.460         0.581         0.256         0.369         0.457
+ SYSTEMK        0.313         0.276         0.494         0.387         0.311
+ SYSTEM1        0.432         0.370         0.356         0.585         0.429
+ SYSTEM2        0.584         0.463         0.290         0.433         0.579
+ SYSTEM3        0.463         0.581         0.258         0.371         0.460
+ SCHIDK         0.313         0.276         0.494         0.387         0.311
+ SCHID1         0.432         0.370         0.356         0.585         0.429
+ SCHID2         0.584         0.463         0.290         0.433         0.579
+ SCHID3         0.463         0.581         0.258         0.371         0.460
+
+
+           Covariance Coverage
+              LADDER3       EXPERK        EXPER1        EXPER2        EXPER3
+              ________      ________      ________      ________      ________
+ LADDER3        0.582
+ EXPERK         0.276         0.544
+ EXPER1         0.370         0.386         0.587
+ EXPER2         0.458         0.311         0.429         0.581
+ EXPER3         0.582         0.276         0.370         0.458         0.582
+ TETHNICK       0.274         0.540         0.384         0.308         0.274
+ TETHNIC1       0.368         0.385         0.584         0.427         0.368
+ TETHNIC2       0.460         0.312         0.431         0.581         0.460
+ TETHNIC3       0.582         0.276         0.370         0.458         0.582
+ SYSTEMK        0.277         0.544         0.388         0.312         0.277
+ SYSTEM1        0.371         0.388         0.587         0.431         0.371
+ SYSTEM2        0.464         0.314         0.434         0.581         0.464
+ SYSTEM3        0.582         0.278         0.372         0.461         0.582
+ SCHIDK         0.277         0.544         0.388         0.312         0.277
+ SCHID1         0.371         0.388         0.587         0.431         0.371
+ SCHID2         0.464         0.314         0.434         0.581         0.464
+ SCHID3         0.582         0.278         0.372         0.461         0.582
+
+
+           Covariance Coverage
+              TETHNICK      TETHNIC1      TETHNIC2      TETHNIC3      SYSTEMK
+              ________      ________      ________      ________      ________
+ TETHNICK       0.540
+ TETHNIC1       0.383         0.584
+ TETHNIC2       0.309         0.428         0.584
+ TETHNIC3       0.274         0.368         0.460         0.582
+ SYSTEMK        0.540         0.387         0.313         0.277         0.545
+ SYSTEM1        0.385         0.584         0.432         0.371         0.389
+ SYSTEM2        0.312         0.432         0.584         0.464         0.316
+ SYSTEM3        0.275         0.370         0.463         0.582         0.279
+ SCHIDK         0.540         0.387         0.313         0.277         0.545
+ SCHID1         0.385         0.584         0.432         0.371         0.389
+ SCHID2         0.312         0.432         0.584         0.464         0.316
+ SCHID3         0.275         0.370         0.463         0.582         0.279
+
+
+           Covariance Coverage
+              SYSTEM1       SYSTEM2       SYSTEM3       SCHIDK        SCHID1
+              ________      ________      ________      ________      ________
+ SYSTEM1        0.589
+ SYSTEM2        0.435         0.590
+ SYSTEM3        0.373         0.467         0.586
+ SCHIDK         0.389         0.316         0.279         0.545
+ SCHID1         0.589         0.435         0.373         0.389         0.589
+ SCHID2         0.435         0.590         0.467         0.316         0.435
+ SCHID3         0.373         0.467         0.586         0.279         0.373
+
+
+           Covariance Coverage
+              SCHID2        SCHID3
+              ________      ________
+ SCHID2         0.590
+ SCHID3         0.467         0.586
+
+
+
+
+
+RESULTS FOR BASIC ANALYSIS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              GENDER        ETHNIC        BIRTH         STARK         STAR1
+              ________      ________      ________      ________      ________
+      1         1.471         1.390      1979.903         2.010         1.948
+
+
+           Means
+              STAR2         STAR3         READK         READ1         READ2
+              ________      ________      ________      ________      ________
+      1         2.010         2.063       435.946       515.919       577.418
+
+
+           Means
+              READ3         MATHK         MATH1         MATH2         MATH3
+              ________      ________      ________      ________      ________
+      1       608.251       485.558       527.662       574.186       610.320
+
+
+           Means
+              LUNCHK        LUNCH1        LUNCH2        LUNCH3        SCHK
+              ________      ________      ________      ________      ________
+      1         1.535         1.554         1.553         1.551         2.351
+
+
+           Means
+              SCH1          SCH2          SCH3          DEGREEK       DEGREE1
+              ________      ________      ________      ________      ________
+      1         2.353         2.353         2.356         1.396         1.357
+
+
+           Means
+              DEGREE2       DEGREE3       LADDERK       LADDER1       LADDER2
+              ________      ________      ________      ________      ________
+      1         1.390         1.454         1.660         2.245         2.115
+
+
+           Means
+              LADDER3       EXPERK        EXPER1        EXPER2        EXPER3
+              ________      ________      ________      ________      ________
+      1         2.064         9.204        11.730        13.165        14.046
+
+
+           Means
+              TETHNICK      TETHNIC1      TETHNIC2      TETHNIC3      SYSTEMK
+              ________      ________      ________      ________      ________
+      1         1.172         1.198         1.218         1.240        18.201
+
+
+           Means
+              SYSTEM1       SYSTEM2       SYSTEM3       SCHIDK        SCHID1
+              ________      ________      ________      ________      ________
+      1        18.189        18.262        18.253        39.235        39.174
+
+
+           Means
+              SCHID2        SCHID3
+              ________      ________
+      1        39.314        39.308
+
+
+           Covariances
+              GENDER        ETHNIC        BIRTH         STARK         STAR1
+              ________      ________      ________      ________      ________
+ GENDER         0.249
+ ETHNIC         0.000         0.304
+ BIRTH          0.027        -0.009         0.320
+ STARK         -0.003         0.007        -0.005         0.700
+ STAR1         -0.006        -0.022        -0.001         0.005         0.730
+ STAR2         -0.002        -0.005        -0.004         0.013         0.567
+ STAR3         -0.001         0.008        -0.002         0.021         0.509
+ READK          1.137        -2.328        -0.488         0.264        -0.470
+ READ1          2.778        -7.877         3.262         0.209         2.278
+ READ2          2.753        -7.337         5.214        -0.251         1.704
+ READ3          2.453        -4.995         5.321         0.077         0.721
+ MATHK          1.249        -3.702        -2.815        -0.036        -0.127
+ MATH1          0.051        -6.197         0.310         0.183         1.039
+ MATH2          0.494        -6.753         2.722        -0.444         1.361
+ MATH3          0.705        -5.155         4.308         0.011         0.208
+ LUNCHK         0.002         0.103        -0.034         0.010        -0.010
+ LUNCH1         0.000         0.097        -0.044         0.012        -0.001
+ LUNCH2        -0.001         0.098        -0.048         0.000        -0.002
+ LUNCH3        -0.001         0.100        -0.052         0.008        -0.011
+ SCHK           0.000        -0.302         0.012        -0.006         0.038
+ SCH1           0.000        -0.301         0.013        -0.006         0.039
+ SCH2           0.000        -0.301         0.013        -0.005         0.039
+ SCH3          -0.001        -0.301         0.014        -0.005         0.039
+ DEGREEK       -0.002        -0.036         0.003        -0.007        -0.004
+ DEGREE1       -0.001        -0.019        -0.004         0.005         0.037
+ DEGREE2        0.002        -0.019        -0.003        -0.018         0.050
+ DEGREE3        0.000         0.009         0.002        -0.007         0.034
+ LADDERK       -0.008         0.121        -0.006        -0.127        -0.044
+ LADDER1        0.020         0.185        -0.009         0.033        -0.087
+ LADDER2       -0.003         0.049         0.003         0.039        -0.115
+ LADDER3       -0.006         0.067        -0.031         0.070        -0.061
+ EXPERK         0.094        -0.304         0.007         0.237        -0.033
+ EXPER1        -0.032        -0.009        -0.135         0.027         0.864
+ EXPER2         0.086        -0.186         0.027        -0.113         0.306
+ EXPER3         0.070         0.414        -0.062        -0.071         0.265
+ TETHNICK       0.003         0.079         0.005        -0.016        -0.017
+ TETHNIC1      -0.002         0.091        -0.004         0.006         0.011
+ TETHNIC2       0.003         0.081         0.002        -0.002        -0.022
+ TETHNIC3       0.000         0.108         0.000        -0.007        -0.013
+ SYSTEMK       -0.058        -1.901         0.095        -0.179         0.573
+ SYSTEM1       -0.046        -1.899         0.101        -0.191         0.556
+ SYSTEM2       -0.037        -1.917         0.084        -0.175         0.539
+ SYSTEM3       -0.033        -1.914         0.088        -0.152         0.550
+ SCHIDK        -0.116        -3.706         0.220        -0.318         1.219
+ SCHID1        -0.105        -3.730         0.246        -0.372         1.216
+ SCHID2        -0.070        -3.765         0.208        -0.316         1.182
+ SCHID3        -0.067        -3.753         0.206        -0.294         1.189
+
+
+           Covariances
+              STAR2         STAR3         READK         READ1         READ2
+              ________      ________      ________      ________      ________
+ STAR2          0.708
+ STAR3          0.583         0.680
+ READK         -0.292        -0.328       961.647
+ READ1          0.869        -0.012       998.971      2995.334
+ READ2          1.038         0.338       741.893      1944.608      2148.979
+ READ3          0.355        -0.033       599.023      1525.541      1458.601
+ MATHK         -0.173        -0.121      1013.221      1260.397       979.812
+ MATH1         -0.141        -0.432       692.799      1685.630      1251.379
+ MATH2          0.297        -0.224       678.432      1586.398      1534.948
+ MATH3         -0.050        -0.433       589.285      1401.820      1313.296
+ LUNCHK        -0.001         0.010        -3.675        -9.318        -8.108
+ LUNCH1         0.001         0.015        -3.560        -9.582        -8.166
+ LUNCH2        -0.001         0.010        -3.915        -9.734        -8.175
+ LUNCH3        -0.007         0.003        -3.647        -9.855        -8.501
+ SCHK           0.028         0.002         2.601        13.198        11.348
+ SCH1           0.028         0.003         2.553        13.090        11.283
+ SCH2           0.030         0.004         2.535        13.135        11.288
+ SCH3           0.028         0.004         2.484        13.045        11.283
+ DEGREEK       -0.011        -0.009         0.174         1.392         1.959
+ DEGREE1        0.023         0.011        -0.043         1.371         1.042
+ DEGREE2        0.045         0.046        -0.478         0.048         0.506
+ DEGREE3        0.034         0.042        -1.233        -0.122         0.417
+ LADDERK       -0.024        -0.023        -1.407        -6.687        -5.538
+ LADDER1        0.004        -0.006        -0.724        -7.655        -6.865
+ LADDER2       -0.133        -0.089         0.461        -1.630        -5.030
+ LADDER3       -0.090        -0.043        -0.842        -4.102        -4.071
+ EXPERK        -0.050        -0.030        20.370        27.035        15.695
+ EXPER1         0.702         0.543         9.984        20.353        12.411
+ EXPER2         0.403         0.212        -1.237        -9.358        16.690
+ EXPER3         0.324         0.469        -0.434       -14.966        -8.046
+ TETHNICK      -0.007         0.003        -0.406        -3.189        -2.257
+ TETHNIC1       0.016         0.016        -0.914        -3.491        -3.639
+ TETHNIC2      -0.015        -0.003        -0.446        -3.439        -2.828
+ TETHNIC3      -0.016         0.003        -1.144        -4.614        -4.094
+ SYSTEMK        0.408         0.296         9.152        90.965        74.162
+ SYSTEM1        0.384         0.296        11.025        93.270        75.119
+ SYSTEM2        0.400         0.287        10.157        92.738        76.180
+ SYSTEM3        0.427         0.279         9.957        93.512        78.631
+ SCHIDK         0.824         0.505        17.920       171.235       135.753
+ SCHID1         0.778         0.565        21.180       177.674       138.832
+ SCHID2         0.800         0.529        20.622       176.845       140.242
+ SCHID3         0.851         0.512        19.526       178.918       145.697
+
+
+           Covariances
+              READ3         MATHK         MATH1         MATH2         MATH3
+              ________      ________      ________      ________      ________
+ READ3       1597.673
+ MATHK        816.400      2184.759
+ MATH1       1011.745      1163.983      1823.138
+ MATH2       1186.583      1112.062      1394.407      2043.097
+ MATH3       1271.873       953.964      1199.430      1403.683      1724.396
+ LUNCHK        -6.072        -4.787        -6.436        -6.887        -6.373
+ LUNCH1        -6.368        -4.618        -6.601        -6.977        -6.888
+ LUNCH2        -6.420        -5.077        -6.686        -6.923        -6.724
+ LUNCH3        -6.684        -4.626        -6.761        -7.105        -6.887
+ SCHK           6.400         3.750         8.972         9.267         6.396
+ SCH1           6.332         3.713         8.929         9.196         6.411
+ SCH2           6.361         3.664         9.014         9.230         6.511
+ SCH3           6.338         3.582         8.889         9.151         6.470
+ DEGREEK        1.035        -0.016         0.712         1.330         1.137
+ DEGREE1        0.573         0.100         0.963        -0.011         0.906
+ DEGREE2       -0.092        -0.401        -0.337         0.163         0.048
+ DEGREE3        0.705        -1.631        -0.052         0.189         1.143
+ LADDERK       -2.138        -1.606        -3.805        -4.344        -3.233
+ LADDER1       -4.604        -2.224        -5.445        -4.654        -5.318
+ LADDER2        0.061         2.305         1.924        -2.639        -2.625
+ LADDER3       -4.185         0.436        -2.905        -3.243        -5.419
+ EXPERK        10.082        26.936        15.409        16.321         9.330
+ EXPER1         2.923        27.469         0.756         6.596        16.342
+ EXPER2        -3.551        -0.368        -9.259         2.432        -1.176
+ EXPER3        -0.414       -15.406       -14.008       -21.586        -4.710
+ TETHNICK      -1.438        -0.322        -2.493        -2.454        -1.481
+ TETHNIC1      -2.087        -0.850        -2.178        -2.906        -1.906
+ TETHNIC2      -1.618        -0.276        -2.239        -2.734        -1.758
+ TETHNIC3      -2.551        -1.585        -3.299        -4.005        -2.908
+ SYSTEMK       59.712        24.958        74.215        84.209        65.222
+ SYSTEM1       60.167        25.886        74.241        84.013        64.685
+ SYSTEM2       60.359        25.592        73.898        84.344        65.350
+ SYSTEM3       60.810        26.071        74.782        86.436        66.131
+ SCHIDK       111.784        38.751       136.098       160.376       115.692
+ SCHID1       112.694        39.835       137.626       161.381       115.090
+ SCHID2       113.456        41.070       137.221       161.731       116.384
+ SCHID3       114.031        40.138       139.496       166.822       117.601
+
+
+           Covariances
+              LUNCHK        LUNCH1        LUNCH2        LUNCH3        SCHK
+              ________      ________      ________      ________      ________
+ LUNCHK         0.247
+ LUNCH1         0.182         0.247
+ LUNCH2         0.181         0.195         0.246
+ LUNCH3         0.177         0.183         0.200         0.248
+ SCHK          -0.130        -0.124        -0.123        -0.123         0.875
+ SCH1          -0.129        -0.124        -0.123        -0.123         0.869
+ SCH2          -0.128        -0.123        -0.124        -0.124         0.863
+ SCH3          -0.127        -0.123        -0.123        -0.123         0.857
+ DEGREEK       -0.014        -0.019        -0.009        -0.013         0.067
+ DEGREE1       -0.019        -0.016        -0.019        -0.013         0.016
+ DEGREE2       -0.007        -0.006        -0.002        -0.003         0.043
+ DEGREE3       -0.005        -0.005        -0.003        -0.004         0.004
+ LADDERK        0.052         0.061         0.057         0.063        -0.251
+ LADDER1        0.068         0.069         0.062         0.070        -0.503
+ LADDER2        0.037         0.050         0.044         0.043        -0.116
+ LADDER3        0.072         0.066         0.059         0.071        -0.176
+ EXPERK        -0.178        -0.203        -0.210        -0.188         0.488
+ EXPER1         0.006         0.058         0.073         0.040        -0.301
+ EXPER2        -0.185        -0.238        -0.135        -0.125         0.807
+ EXPER3         0.144         0.118         0.137         0.129        -0.818
+ TETHNICK       0.031         0.029         0.028         0.029        -0.165
+ TETHNIC1       0.046         0.047         0.046         0.043        -0.173
+ TETHNIC2       0.034         0.030         0.029         0.031        -0.154
+ TETHNIC3       0.051         0.047         0.048         0.050        -0.211
+ SYSTEMK       -0.910        -0.915        -0.829        -0.828         3.053
+ SYSTEM1       -0.910        -0.915        -0.834        -0.829         3.056
+ SYSTEM2       -0.905        -0.910        -0.828        -0.823         3.115
+ SYSTEM3       -0.923        -0.920        -0.839        -0.847         3.125
+ SCHIDK        -1.845        -1.826        -1.712        -1.653         5.351
+ SCHID1        -1.861        -1.848        -1.746        -1.688         5.402
+ SCHID2        -1.846        -1.836        -1.740        -1.681         5.510
+ SCHID3        -1.873        -1.847        -1.752        -1.722         5.537
+
+
+           Covariances
+              SCH1          SCH2          SCH3          DEGREEK       DEGREE1
+              ________      ________      ________      ________      ________
+ SCH1           0.869
+ SCH2           0.864         0.866
+ SCH3           0.858         0.860         0.862
+ DEGREEK        0.066         0.065         0.065         0.408
+ DEGREE1        0.016         0.015         0.016         0.022         0.261
+ DEGREE2        0.042         0.042         0.042         0.028         0.019
+ DEGREE3        0.004         0.004         0.004        -0.011        -0.004
+ LADDERK       -0.248        -0.247        -0.247        -0.169         0.011
+ LADDER1       -0.509        -0.509        -0.508        -0.140        -0.163
+ LADDER2       -0.117        -0.114        -0.109        -0.001        -0.095
+ LADDER3       -0.179        -0.183        -0.187         0.010         0.050
+ EXPERK         0.484         0.486         0.482         0.717        -0.063
+ EXPER1        -0.288        -0.291        -0.272         0.020         0.750
+ EXPER2         0.804         0.806         0.796        -0.125        -0.047
+ EXPER3        -0.807        -0.797        -0.768        -0.110        -0.143
+ TETHNICK      -0.163        -0.163        -0.161        -0.038        -0.009
+ TETHNIC1      -0.173        -0.173        -0.173        -0.030        -0.015
+ TETHNIC2      -0.151        -0.152        -0.152        -0.026        -0.012
+ TETHNIC3      -0.208        -0.208        -0.208        -0.016        -0.019
+ SYSTEMK        3.049         3.057         3.051         0.468         0.046
+ SYSTEM1        3.032         3.047         3.041         0.465         0.036
+ SYSTEM2        3.086         3.091         3.082         0.450         0.052
+ SYSTEM3        3.096         3.098         3.071         0.462         0.060
+ SCHIDK         5.349         5.388         5.376         0.859         0.067
+ SCHID1         5.348         5.400         5.394         0.871         0.055
+ SCHID2         5.447         5.471         5.459         0.831         0.094
+ SCHID3         5.478         5.487         5.407         0.876         0.106
+
+
+           Covariances
+              DEGREE2       DEGREE3       LADDERK       LADDER1       LADDER2
+              ________      ________      ________      ________      ________
+ DEGREE2        0.290
+ DEGREE3        0.055         0.275
+ LADDERK       -0.047        -0.041         1.649
+ LADDER1        0.006        -0.008         0.262         3.182
+ LADDER2       -0.141         0.067         0.084        -0.041         3.359
+ LADDER3       -0.070        -0.183         0.001         0.195         0.075
+ EXPERK        -0.120        -0.070        -3.520         0.114        -0.011
+ EXPER1        -0.139        -0.275         0.315        -3.689        -0.515
+ EXPER2         0.710         0.246        -0.284        -0.173        -3.361
+ EXPER3         0.097         0.677         0.225         1.655        -1.627
+ TETHNICK      -0.011         0.008         0.044         0.087        -0.020
+ TETHNIC1      -0.008         0.007         0.079         0.179         0.020
+ TETHNIC2      -0.016         0.010         0.082         0.073         0.005
+ TETHNIC3      -0.008         0.010         0.082         0.104         0.096
+ SYSTEMK        0.436         0.255        -1.712        -2.061         0.394
+ SYSTEM1        0.448         0.255        -1.641        -2.040         0.443
+ SYSTEM2        0.439         0.269        -1.651        -2.064         0.429
+ SYSTEM3        0.436         0.271        -1.639        -2.039         0.389
+ SCHIDK         0.863         0.451        -2.306        -2.924         1.299
+ SCHID1         0.891         0.422        -2.224        -2.933         1.429
+ SCHID2         0.868         0.437        -2.239        -2.975         1.432
+ SCHID3         0.862         0.418        -2.141        -2.914         1.309
+
+
+           Covariances
+              LADDER3       EXPERK        EXPER1        EXPER2        EXPER3
+              ________      ________      ________      ________      ________
+ LADDER3        2.826
+ EXPERK        -0.154        33.727
+ EXPER1        -0.123         0.917        80.005
+ EXPER2        -1.318         2.002        -2.829        75.139
+ EXPER3        -3.040         1.046        -0.613         6.184        74.308
+ TETHNICK       0.018        -0.042         0.188         0.129         0.269
+ TETHNIC1       0.048        -0.153         0.359        -0.374         0.314
+ TETHNIC2       0.011        -0.171         0.279         0.414         0.299
+ TETHNIC3       0.024        -0.244         0.112        -0.204         0.719
+ SYSTEMK       -1.295         4.985        -9.146        -1.043        -8.864
+ SYSTEM1       -1.377         4.925        -9.224        -1.234        -8.635
+ SYSTEM2       -1.369         4.784        -9.186        -1.369        -9.053
+ SYSTEM3       -1.372         4.847        -8.941        -0.904        -9.244
+ SCHIDK        -2.449         9.663       -23.058        -1.967       -19.727
+ SCHID1        -2.563         9.568       -23.142        -2.006       -19.582
+ SCHID2        -2.556         9.242       -23.037        -2.243       -20.363
+ SCHID3        -2.504         9.209       -22.963        -1.172       -20.914
+
+
+           Covariances
+              TETHNICK      TETHNIC1      TETHNIC2      TETHNIC3      SYSTEMK
+              ________      ________      ________      ________      ________
+ TETHNICK       0.137
+ TETHNIC1       0.043         0.146
+ TETHNIC2       0.057         0.038         0.164
+ TETHNIC3       0.045         0.063         0.060         0.176
+ SYSTEMK       -0.971        -1.059        -1.108        -1.071       113.508
+ SYSTEM1       -0.964        -1.056        -1.106        -1.066       112.409
+ SYSTEM2       -0.968        -1.064        -1.118        -1.077       111.860
+ SYSTEM3       -0.966        -1.063        -1.117        -1.079       110.818
+ SCHIDK        -2.126        -2.045        -2.326        -2.030       229.504
+ SCHID1        -2.105        -2.045        -2.335        -2.042       227.744
+ SCHID2        -2.104        -2.058        -2.349        -2.042       226.525
+ SCHID3        -2.114        -2.059        -2.323        -2.045       224.259
+
+
+           Covariances
+              SYSTEM1       SYSTEM2       SYSTEM3       SCHIDK        SCHID1
+              ________      ________      ________      ________      ________
+ SYSTEM1      113.588
+ SYSTEM2      112.394       113.497
+ SYSTEM3      111.373       112.664       113.730
+ SCHIDK       227.344       225.984       223.745       494.302
+ SCHID1       230.313       227.728       225.612       490.140       496.969
+ SCHID2       227.839       229.930       228.222       486.516       490.898
+ SCHID3       225.735       228.137       230.331       480.952       486.097
+
+
+           Covariances
+              SCHID2        SCHID3
+              ________      ________
+ SCHID2       495.894
+ SCHID3       491.325       496.577
+
+
+           Correlations
+              GENDER        ETHNIC        BIRTH         STARK         STAR1
+              ________      ________      ________      ________      ________
+ GENDER         1.000
+ ETHNIC        -0.002         1.000
+ BIRTH          0.095        -0.028         1.000
+ STARK         -0.007         0.014        -0.010         1.000
+ STAR1         -0.013        -0.046        -0.003         0.007         1.000
+ STAR2         -0.004        -0.010        -0.008         0.019         0.789
+ STAR3         -0.002         0.018        -0.005         0.030         0.723
+ READK          0.073        -0.136        -0.028         0.010        -0.018
+ READ1          0.102        -0.261         0.105         0.005         0.049
+ READ2          0.119        -0.287         0.199        -0.006         0.043
+ READ3          0.123        -0.227         0.235         0.002         0.021
+ MATHK          0.054        -0.144        -0.106        -0.001        -0.003
+ MATH1          0.002        -0.263         0.013         0.005         0.028
+ MATH2          0.022        -0.271         0.106        -0.012         0.035
+ MATH3          0.034        -0.225         0.183         0.000         0.006
+ LUNCHK         0.010         0.374        -0.122         0.024        -0.025
+ LUNCH1         0.001         0.354        -0.158         0.028        -0.003
+ LUNCH2        -0.003         0.360        -0.173         0.000        -0.005
+ LUNCH3        -0.005         0.364        -0.183         0.019        -0.026
+ SCHK           0.001        -0.586         0.023        -0.008         0.048
+ SCH1           0.000        -0.585         0.024        -0.008         0.049
+ SCH2           0.000        -0.587         0.025        -0.007         0.049
+ SCH3          -0.003        -0.588         0.026        -0.007         0.049
+ DEGREEK       -0.005        -0.102         0.009        -0.014        -0.007
+ DEGREE1       -0.004        -0.067        -0.014         0.011         0.085
+ DEGREE2        0.008        -0.063        -0.008        -0.039         0.109
+ DEGREE3        0.001         0.030         0.006        -0.015         0.076
+ LADDERK       -0.013         0.171        -0.008        -0.118        -0.040
+ LADDER1        0.022         0.188        -0.009         0.022        -0.057
+ LADDER2       -0.003         0.048         0.003         0.025        -0.074
+ LADDER3       -0.007         0.072        -0.033         0.050        -0.043
+ EXPERK         0.033        -0.095         0.002         0.049        -0.007
+ EXPER1        -0.007        -0.002        -0.027         0.004         0.113
+ EXPER2         0.020        -0.039         0.005        -0.016         0.041
+ EXPER3         0.016         0.087        -0.013        -0.010         0.036
+ TETHNICK       0.014         0.385         0.023        -0.051        -0.054
+ TETHNIC1      -0.009         0.434        -0.019         0.017         0.035
+ TETHNIC2       0.015         0.361         0.011        -0.007        -0.063
+ TETHNIC3      -0.002         0.469         0.000        -0.021        -0.036
+ SYSTEMK       -0.011        -0.324         0.016        -0.020         0.063
+ SYSTEM1       -0.009        -0.323         0.017        -0.021         0.061
+ SYSTEM2       -0.007        -0.326         0.014        -0.020         0.059
+ SYSTEM3       -0.006        -0.326         0.015        -0.017         0.060
+ SCHIDK        -0.010        -0.302         0.017        -0.017         0.064
+ SCHID1        -0.009        -0.304         0.020        -0.020         0.064
+ SCHID2        -0.006        -0.307         0.016        -0.017         0.062
+ SCHID3        -0.006        -0.306         0.016        -0.016         0.062
+
+
+           Correlations
+              STAR2         STAR3         READK         READ1         READ2
+              ________      ________      ________      ________      ________
+ STAR2          1.000
+ STAR3          0.840         1.000
+ READK         -0.011        -0.013         1.000
+ READ1          0.019         0.000         0.589         1.000
+ READ2          0.027         0.009         0.516         0.766         1.000
+ READ3          0.011        -0.001         0.483         0.697         0.787
+ MATHK         -0.004        -0.003         0.699         0.493         0.452
+ MATH1         -0.004        -0.012         0.523         0.721         0.632
+ MATH2          0.008        -0.006         0.484         0.641         0.733
+ MATH3         -0.001        -0.013         0.458         0.617         0.682
+ LUNCHK        -0.002         0.025        -0.238        -0.342        -0.352
+ LUNCH1         0.002         0.036        -0.231        -0.352        -0.354
+ LUNCH2        -0.001         0.024        -0.255        -0.359        -0.356
+ LUNCH3        -0.017         0.007        -0.236        -0.361        -0.368
+ SCHK           0.036         0.002         0.090         0.258         0.262
+ SCH1           0.036         0.004         0.088         0.257         0.261
+ SCH2           0.038         0.005         0.088         0.258         0.262
+ SCH3           0.036         0.005         0.086         0.257         0.262
+ DEGREEK       -0.020        -0.017         0.009         0.040         0.066
+ DEGREE1        0.054         0.026        -0.003         0.049         0.044
+ DEGREE2        0.099         0.105        -0.029         0.002         0.020
+ DEGREE3        0.077         0.098        -0.076        -0.004         0.017
+ LADDERK       -0.022        -0.022        -0.035        -0.095        -0.093
+ LADDER1        0.002        -0.004        -0.013        -0.078        -0.083
+ LADDER2       -0.086        -0.059         0.008        -0.016        -0.059
+ LADDER3       -0.064        -0.031        -0.016        -0.045        -0.052
+ EXPERK        -0.010        -0.006         0.113         0.085         0.058
+ EXPER1         0.093         0.074         0.036         0.042         0.030
+ EXPER2         0.055         0.030        -0.005        -0.020         0.042
+ EXPER3         0.045         0.066        -0.002        -0.032        -0.020
+ TETHNICK      -0.021         0.011        -0.035        -0.157        -0.131
+ TETHNIC1       0.050         0.051        -0.077        -0.167        -0.206
+ TETHNIC2      -0.045        -0.009        -0.035        -0.155        -0.151
+ TETHNIC3      -0.045         0.007        -0.088        -0.201        -0.211
+ SYSTEMK        0.046         0.034         0.028         0.156         0.150
+ SYSTEM1        0.043         0.034         0.033         0.160         0.152
+ SYSTEM2        0.045         0.033         0.031         0.159         0.154
+ SYSTEM3        0.048         0.032         0.030         0.160         0.159
+ SCHIDK         0.044         0.028         0.026         0.141         0.132
+ SCHID1         0.041         0.031         0.031         0.146         0.134
+ SCHID2         0.043         0.029         0.030         0.145         0.136
+ SCHID3         0.045         0.028         0.028         0.147         0.141
+
+
+           Correlations
+              READ3         MATHK         MATH1         MATH2         MATH3
+              ________      ________      ________      ________      ________
+ READ3          1.000
+ MATHK          0.437         1.000
+ MATH1          0.593         0.583         1.000
+ MATH2          0.657         0.526         0.722         1.000
+ MATH3          0.766         0.491         0.676         0.748         1.000
+ LUNCHK        -0.306        -0.206        -0.303        -0.306        -0.309
+ LUNCH1        -0.320        -0.199        -0.311        -0.310        -0.334
+ LUNCH2        -0.324        -0.219        -0.316        -0.309        -0.327
+ LUNCH3        -0.336        -0.199        -0.318        -0.315        -0.333
+ SCHK           0.171         0.086         0.225         0.219         0.165
+ SCH1           0.170         0.085         0.224         0.218         0.166
+ SCH2           0.171         0.084         0.227         0.219         0.169
+ SCH3           0.171         0.083         0.224         0.218         0.168
+ DEGREEK        0.041        -0.001         0.026         0.046         0.043
+ DEGREE1        0.028         0.004         0.044         0.000         0.043
+ DEGREE2       -0.004        -0.016        -0.015         0.007         0.002
+ DEGREE3        0.034        -0.067        -0.002         0.008         0.053
+ LADDERK       -0.042        -0.027        -0.069        -0.075        -0.061
+ LADDER1       -0.065        -0.027        -0.071        -0.058        -0.072
+ LADDER2        0.001         0.027         0.025        -0.032        -0.034
+ LADDER3       -0.062         0.006        -0.040        -0.043        -0.078
+ EXPERK         0.043         0.099         0.062         0.062         0.039
+ EXPER1         0.008         0.066         0.002         0.016         0.044
+ EXPER2        -0.010        -0.001        -0.025         0.006        -0.003
+ EXPER3        -0.001        -0.038        -0.038        -0.055        -0.013
+ TETHNICK      -0.097        -0.019        -0.157        -0.146        -0.096
+ TETHNIC1      -0.137        -0.048        -0.134        -0.168        -0.120
+ TETHNIC2      -0.100        -0.015        -0.129        -0.149        -0.104
+ TETHNIC3      -0.152        -0.081        -0.184        -0.211        -0.167
+ SYSTEMK        0.140         0.050         0.163         0.175         0.147
+ SYSTEM1        0.141         0.052         0.163         0.174         0.146
+ SYSTEM2        0.142         0.051         0.162         0.175         0.148
+ SYSTEM3        0.143         0.052         0.164         0.179         0.149
+ SCHIDK         0.126         0.037         0.143         0.160         0.125
+ SCHID1         0.126         0.038         0.145         0.160         0.124
+ SCHID2         0.127         0.039         0.144         0.161         0.126
+ SCHID3         0.128         0.039         0.147         0.166         0.127
+
+
+           Correlations
+              LUNCHK        LUNCH1        LUNCH2        LUNCH3        SCHK
+              ________      ________      ________      ________      ________
+ LUNCHK         1.000
+ LUNCH1         0.737         1.000
+ LUNCH2         0.735         0.790         1.000
+ LUNCH3         0.713         0.737         0.809         1.000
+ SCHK          -0.280        -0.267        -0.266        -0.265         1.000
+ SCH1          -0.279        -0.267        -0.267        -0.266         0.996
+ SCH2          -0.278        -0.267        -0.268        -0.267         0.992
+ SCH3          -0.275        -0.266        -0.267        -0.265         0.986
+ DEGREEK       -0.045        -0.058        -0.030        -0.040         0.111
+ DEGREE1       -0.074        -0.065        -0.076        -0.052         0.034
+ DEGREE2       -0.027        -0.023        -0.007        -0.012         0.085
+ DEGREE3       -0.021        -0.019        -0.011        -0.013         0.009
+ LADDERK        0.082         0.096         0.090         0.099        -0.209
+ LADDER1        0.077         0.078         0.070         0.079        -0.301
+ LADDER2        0.041         0.054         0.049         0.047        -0.067
+ LADDER3        0.086         0.079         0.070         0.085        -0.112
+ EXPERK        -0.062        -0.070        -0.073        -0.065         0.090
+ EXPER1         0.001         0.013         0.017         0.009        -0.036
+ EXPER2        -0.043        -0.055        -0.031        -0.029         0.099
+ EXPER3         0.034         0.027         0.032         0.030        -0.101
+ TETHNICK       0.166         0.159         0.153         0.156        -0.474
+ TETHNIC1       0.243         0.248         0.244         0.227        -0.485
+ TETHNIC2       0.171         0.149         0.145         0.153        -0.405
+ TETHNIC3       0.243         0.227         0.229         0.240        -0.538
+ SYSTEMK       -0.172        -0.173        -0.157        -0.156         0.306
+ SYSTEM1       -0.172        -0.173        -0.158        -0.156         0.307
+ SYSTEM2       -0.171        -0.172        -0.157        -0.155         0.313
+ SYSTEM3       -0.174        -0.174        -0.159        -0.159         0.313
+ SCHIDK        -0.167        -0.165        -0.155        -0.149         0.257
+ SCHID1        -0.168        -0.167        -0.158        -0.152         0.259
+ SCHID2        -0.167        -0.166        -0.158        -0.151         0.264
+ SCHID3        -0.169        -0.167        -0.159        -0.155         0.266
+
+
+           Correlations
+              SCH1          SCH2          SCH3          DEGREEK       DEGREE1
+              ________      ________      ________      ________      ________
+ SCH1           1.000
+ SCH2           0.996         1.000
+ SCH3           0.991         0.996         1.000
+ DEGREEK        0.110         0.110         0.110         1.000
+ DEGREE1        0.033         0.033         0.034         0.068         1.000
+ DEGREE2        0.083         0.084         0.083         0.081         0.070
+ DEGREE3        0.008         0.008         0.009        -0.033        -0.016
+ LADDERK       -0.207        -0.207        -0.207        -0.207         0.017
+ LADDER1       -0.306        -0.307        -0.306        -0.122        -0.179
+ LADDER2       -0.069        -0.067        -0.064        -0.001        -0.102
+ LADDER3       -0.114        -0.117        -0.120         0.009         0.059
+ EXPERK         0.089         0.090         0.089         0.193        -0.021
+ EXPER1        -0.035        -0.035        -0.033         0.003         0.164
+ EXPER2         0.100         0.100         0.099        -0.023        -0.011
+ EXPER3        -0.100        -0.099        -0.096        -0.020        -0.032
+ TETHNICK      -0.473        -0.473        -0.467        -0.162        -0.046
+ TETHNIC1      -0.488        -0.488        -0.489        -0.123        -0.077
+ TETHNIC2      -0.401        -0.402        -0.403        -0.099        -0.056
+ TETHNIC3      -0.534        -0.534        -0.534        -0.060        -0.089
+ SYSTEMK        0.307         0.308         0.308         0.069         0.009
+ SYSTEM1        0.305         0.307         0.307         0.068         0.007
+ SYSTEM2        0.311         0.312         0.312         0.066         0.010
+ SYSTEM3        0.311         0.312         0.310         0.068         0.011
+ SCHIDK         0.258         0.260         0.260         0.060         0.006
+ SCHID1         0.257         0.260         0.261         0.061         0.005
+ SCHID2         0.262         0.264         0.264         0.058         0.008
+ SCHID3         0.264         0.265         0.261         0.062         0.009
+
+
+           Correlations
+              DEGREE2       DEGREE3       LADDERK       LADDER1       LADDER2
+              ________      ________      ________      ________      ________
+ DEGREE2        1.000
+ DEGREE3        0.196         1.000
+ LADDERK       -0.069        -0.061         1.000
+ LADDER1        0.006        -0.009         0.114         1.000
+ LADDER2       -0.143         0.070         0.036        -0.013         1.000
+ LADDER3       -0.077        -0.208         0.000         0.065         0.024
+ EXPERK        -0.038        -0.023        -0.472         0.011        -0.001
+ EXPER1        -0.029        -0.059         0.027        -0.231        -0.031
+ EXPER2         0.152         0.054        -0.026        -0.011        -0.212
+ EXPER3         0.021         0.150         0.020         0.108        -0.103
+ TETHNICK      -0.054         0.039         0.093         0.131        -0.030
+ TETHNIC1      -0.039         0.035         0.161         0.263         0.028
+ TETHNIC2      -0.071         0.046         0.157         0.101         0.007
+ TETHNIC3      -0.037         0.046         0.152         0.139         0.125
+ SYSTEMK        0.076         0.046        -0.125        -0.108         0.020
+ SYSTEM1        0.078         0.046        -0.120        -0.107         0.023
+ SYSTEM2        0.076         0.048        -0.121        -0.109         0.022
+ SYSTEM3        0.076         0.048        -0.120        -0.107         0.020
+ SCHIDK         0.072         0.039        -0.081        -0.074         0.032
+ SCHID1         0.074         0.036        -0.078        -0.074         0.035
+ SCHID2         0.072         0.037        -0.078        -0.075         0.035
+ SCHID3         0.072         0.036        -0.075        -0.073         0.032
+
+
+           Correlations
+              LADDER3       EXPERK        EXPER1        EXPER2        EXPER3
+              ________      ________      ________      ________      ________
+ LADDER3        1.000
+ EXPERK        -0.016         1.000
+ EXPER1        -0.008         0.018         1.000
+ EXPER2        -0.090         0.040        -0.036         1.000
+ EXPER3        -0.210         0.021        -0.008         0.083         1.000
+ TETHNICK       0.028        -0.020         0.057         0.040         0.084
+ TETHNIC1       0.075        -0.069         0.105        -0.113         0.096
+ TETHNIC2       0.017        -0.073         0.077         0.118         0.086
+ TETHNIC3       0.034        -0.100         0.030        -0.056         0.199
+ SYSTEMK       -0.072         0.081        -0.096        -0.011        -0.097
+ SYSTEM1       -0.077         0.080        -0.097        -0.013        -0.094
+ SYSTEM2       -0.076         0.077        -0.096        -0.015        -0.099
+ SYSTEM3       -0.077         0.078        -0.094        -0.010        -0.101
+ SCHIDK        -0.066         0.075        -0.116        -0.010        -0.103
+ SCHID1        -0.068         0.074        -0.116        -0.010        -0.102
+ SCHID2        -0.068         0.071        -0.116        -0.012        -0.106
+ SCHID3        -0.067         0.071        -0.115        -0.006        -0.109
+
+
+           Correlations
+              TETHNICK      TETHNIC1      TETHNIC2      TETHNIC3      SYSTEMK
+              ________      ________      ________      ________      ________
+ TETHNICK       1.000
+ TETHNIC1       0.305         1.000
+ TETHNIC2       0.382         0.245         1.000
+ TETHNIC3       0.292         0.391         0.351         1.000
+ SYSTEMK       -0.246        -0.260        -0.257        -0.240         1.000
+ SYSTEM1       -0.244        -0.260        -0.256        -0.239         0.990
+ SYSTEM2       -0.245        -0.262        -0.259        -0.241         0.986
+ SYSTEM3       -0.244        -0.261        -0.258        -0.241         0.975
+ SCHIDK        -0.258        -0.241        -0.258        -0.218         0.969
+ SCHID1        -0.255        -0.240        -0.258        -0.219         0.959
+ SCHID2        -0.255        -0.242        -0.260        -0.219         0.955
+ SCHID3        -0.256        -0.242        -0.257        -0.219         0.945
+
+
+           Correlations
+              SYSTEM1       SYSTEM2       SYSTEM3       SCHIDK        SCHID1
+              ________      ________      ________      ________      ________
+ SYSTEM1        1.000
+ SYSTEM2        0.990         1.000
+ SYSTEM3        0.980         0.992         1.000
+ SCHIDK         0.959         0.954         0.944         1.000
+ SCHID1         0.969         0.959         0.949         0.989         1.000
+ SCHID2         0.960         0.969         0.961         0.983         0.989
+ SCHID3         0.950         0.961         0.969         0.971         0.979
+
+
+           Correlations
+              SCHID2        SCHID3
+              ________      ________
+ SCHID2         1.000
+ SCHID3         0.990         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -595638.875
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Scatterplots (sample values)
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for TYPE=BASIC.
+  No diagram output was produced.
+
+
+     Beginning Time:  09:51:44
+        Ending Time:  09:51:52
+       Elapsed Time:  00:00:08
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

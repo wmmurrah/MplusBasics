@@ -1,0 +1,247 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+02/06/2013   4:06 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  STAR analysis
+
+  DATA:
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+
+  VARIABLE:
+    NAMES ARE childId	readk	read1	mathk	math1
+    male	white black hisp;
+    USEVARIABLES ARE math1 mathk readk male black;
+    MISSING ARE ALL (-99);
+
+  Model:
+    math1 ON mathk readk male black;
+
+  OUTPUT: stdyx stdy;
+  plot: type = plot1 plot2;
+
+
+
+*** WARNING
+  Data set contains cases with missing on x-variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on x-variables:  52
+*** WARNING
+  Data set contains cases with missing on all variables except
+  x-variables.  These cases were not included in the analysis.
+  Number of cases with missing on all variables except x-variables:  11
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+STAR analysis
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                          37
+
+Number of dependent variables                                    1
+Number of independent variables                                  4
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MATH1
+
+Observed independent variables
+   MATHK       READK       MALE        BLACK
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1          1.000
+ MATHK          1.000         1.000
+ READK          1.000         1.000         1.000
+ MALE           1.000         1.000         1.000         1.000
+ BLACK          1.000         1.000         1.000         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        6
+
+Loglikelihood
+
+          H0 Value                        -169.616
+          H1 Value                        -169.616
+
+Information Criteria
+
+          Akaike (AIC)                     351.232
+          Bayesian (BIC)                   360.897
+          Sample-Size Adjusted BIC         342.145
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                             34.847
+          Degrees of Freedom                     4
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MATH1    ON
+    MATHK              0.404      0.121      3.339      0.001
+    READK              0.455      0.210      2.169      0.030
+    MALE              18.980      8.611      2.204      0.028
+    BLACK            -25.895      8.454     -3.063      0.002
+
+ Intercepts
+    MATH1            135.959     71.942      1.890      0.059
+
+ Residual Variances
+    MATH1            561.467    130.538      4.301      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MATH1    ON
+    MATHK              0.464      0.135      3.437      0.001
+    READK              0.301      0.138      2.181      0.029
+    MALE               0.234      0.108      2.175      0.030
+    BLACK             -0.319      0.105     -3.030      0.002
+
+ Intercepts
+    MATH1              3.583      2.138      1.676      0.094
+
+ Residual Variances
+    MATH1              0.390      0.100      3.894      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MATH1    ON
+    MATHK              0.011      0.003      3.489      0.000
+    READK              0.012      0.005      2.208      0.027
+    MALE               0.500      0.223      2.246      0.025
+    BLACK             -0.682      0.215     -3.178      0.001
+
+ Intercepts
+    MATH1              3.583      2.138      1.676      0.094
+
+ Residual Variances
+    MATH1              0.390      0.100      3.894      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    MATH1              0.610      0.100      6.092      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.265E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Histograms of estimated values
+  Scatterplots (sample values, estimated values)
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\dropbox\3_teaching\mplusbasics\starregressionfiml.dgm
+
+     Beginning Time:  16:06:17
+        Ending Time:  16:06:17
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

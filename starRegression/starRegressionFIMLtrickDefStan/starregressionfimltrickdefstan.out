@@ -1,0 +1,341 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+02/06/2013   4:11 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  STAR analysis
+
+  DATA:
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+
+  VARIABLE:
+    NAMES ARE childId	readk	read1	mathk	math1
+    male	white black hisp;
+    USEVARIABLES ARE math1 mathk readk male black;
+    MISSING ARE ALL (-99);
+   DEFINE:
+    standardize math1-readk;
+  Model:
+    math1 ON mathk readk male black;
+  math1; mathk; readk; male; black;
+
+  OUTPUT:
+  plot: type = plot1 plot2;
+
+
+
+*** WARNING in DEFINE command
+  The STANDARDIZE transformation is done after all other DEFINE transformations
+  have been completed.
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+STAR analysis
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of dependent variables                                    1
+Number of independent variables                                  4
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MATH1
+
+Observed independent variables
+   MATHK       READK       MALE        BLACK
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             4
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1          0.560
+ MATHK          0.370         0.480
+ READK          0.370         0.480         0.480
+ MALE           0.560         0.480         0.480         1.000
+ BLACK          0.560         0.480         0.480         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES MAY NOT BE
+     TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE
+     FIRST-ORDER DERIVATIVE PRODUCT MATRIX.  THIS MAY BE DUE TO THE STARTING
+     VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION.  THE
+     CONDITION NUMBER IS       0.110D-13.  PROBLEM INVOLVING PARAMETER 20.
+
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       20
+
+Loglikelihood
+
+          H0 Value                        -318.538
+          H1 Value                        -318.538
+
+Information Criteria
+
+          Akaike (AIC)                     677.075
+          Bayesian (BIC)                   729.178
+          Sample-Size Adjusted BIC         666.013
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                             38.544
+          Degrees of Freedom                     4
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MATH1    ON
+    MATHK              0.460      0.132      3.478      0.001
+    READK              0.283      0.131      2.166      0.030
+    MALE               0.340      0.199      1.710      0.087
+    BLACK             -0.652      0.192     -3.392      0.001
+
+ READK    WITH
+    MATHK              0.768      0.193      3.974      0.000
+
+ MALE     WITH
+    MATHK             -0.086      0.072     -1.189      0.235
+    READK             -0.075      0.073     -1.022      0.307
+
+ BLACK    WITH
+    MATHK             -0.082      0.066     -1.251      0.211
+    READK             -0.052      0.066     -0.789      0.430
+    MALE              -0.007      0.024     -0.287      0.774
+
+ Means
+    MATHK              0.018      0.140      0.125      0.900
+    READK              0.012      0.141      0.088      0.930
+    MALE               0.520      0.050     10.408      0.000
+    BLACK              0.340      0.047      7.177      0.000
+
+ Intercepts
+    MATH1             -0.022      0.180     -0.120      0.904
+
+ Variances
+    MATHK              1.084      0.226      4.790      0.000
+    READK              1.062      0.223      4.754      0.000
+    MALE               0.250      0.035      7.071      0.000
+    BLACK              0.224      0.032      7.071      0.000
+
+ Residual Variances
+    MATH1              0.344      0.081      4.244      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.470E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+      1           0             0             0             0             0
+
+
+           LAMBDA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1              0             0             0             0             0
+ MATHK              0             0             0             0             0
+ READK              0             0             0             0             0
+ MALE               0             0             0             0             0
+ BLACK              0             0             0             0             0
+
+
+           THETA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1              0
+ MATHK              0             0
+ READK              0             0             0
+ MALE               0             0             0             0
+ BLACK              0             0             0             0             0
+
+
+           ALPHA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+      1           1             2             3             4             5
+
+
+           BETA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1              0             6             7             8             9
+ MATHK              0             0             0             0             0
+ READK              0             0             0             0             0
+ MALE               0             0             0             0             0
+ BLACK              0             0             0             0             0
+
+
+           PSI
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1             10
+ MATHK              0            11
+ READK              0            12            13
+ MALE               0            14            15            16
+ BLACK              0            17            18            19            20
+
+
+     STARTING VALUES
+
+
+           NU
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1          1.000         0.000         0.000         0.000         0.000
+ MATHK          0.000         1.000         0.000         0.000         0.000
+ READK          0.000         0.000         1.000         0.000         0.000
+ MALE           0.000         0.000         0.000         1.000         0.000
+ BLACK          0.000         0.000         0.000         0.000         1.000
+
+
+           THETA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1          0.000
+ MATHK          0.000         0.000
+ READK          0.000         0.000         0.000
+ MALE           0.000         0.000         0.000         0.000
+ BLACK          0.000         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.000         0.520         0.340
+
+
+           BETA
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1          0.000         0.000         0.000         0.000         0.000
+ MATHK          0.000         0.000         0.000         0.000         0.000
+ READK          0.000         0.000         0.000         0.000         0.000
+ MALE           0.000         0.000         0.000         0.000         0.000
+ BLACK          0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              MATH1         MATHK         READK         MALE          BLACK
+              ________      ________      ________      ________      ________
+ MATH1          0.500
+ MATHK          0.000         0.500
+ READK          0.000         0.000         0.500
+ MALE           0.000         0.000         0.000         0.126
+ BLACK          0.000         0.000         0.000         0.000         0.113
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Histograms of estimated values
+  Scatterplots (sample values, estimated values)
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\dropbox\3_teaching\mplusbasics\starregressionfimltrickdefstan.dgm
+
+     Beginning Time:  16:11:59
+        Ending Time:  16:11:59
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

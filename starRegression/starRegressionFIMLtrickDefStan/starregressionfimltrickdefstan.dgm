@@ -1,0 +1,50 @@
+VERSION 1.0.0
+INPUT
+TITLE:
+  STAR analysis
+
+DATA:
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+VARIABLE:
+  NAMES ARE childId readk read1 mathk math1
+  male white black hisp;
+  USEVARIABLES ARE math1 mathk readk male black;
+  MISSING ARE ALL (-99);
+DEFINE:
+  standardize math1-readk;
+PLOT:
+ type = plot1 plot2;
+MODEL:
+  math1 ON mathk readk male black;
+math1; mathk; readk; male; black;
+INPUT_END
+2
+0
+0
+0
+1
+GENERAL
+0
+5
+0
+0
+math1 mathk readk male black
+2
+1 0 0 0 0
+0
+0
+1 1 mathk math1    0.460    0.132
+1 1 readk math1    0.283    0.131
+1 1 male math1    0.340    0.199
+1 1 black math1   -0.652    0.192
+2 1 readk mathk    0.768    0.193
+2 1 male mathk   -0.086    0.072
+2 1 male readk   -0.075    0.073
+2 1 black mathk   -0.082    0.066
+2 1 black readk   -0.052    0.066
+2 1 black male   -0.007    0.024
+4 1 math1    0.344    0.081
+5 1 mathk    1.084    0.226
+5 1 readk    1.062    0.223
+5 1 male    0.250    0.035
+5 1 black    0.224    0.032

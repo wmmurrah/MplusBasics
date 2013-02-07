@@ -1,0 +1,18 @@
+TITLE:  STAR analysis
+
+DATA:
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+ 
+VARIABLE:
+  NAMES ARE childId	readk	read1	mathk	math1
+  male	white black hisp;
+  USEVARIABLES ARE math1 mathk readk male black;
+  MISSING ARE ALL (-99);
+ DEFINE: 
+  standardize math1-readk;
+Model:
+  math1 ON mathk readk male black;
+math1; mathk; readk; male; black;
+
+OUTPUT:
+plot: type = plot1 plot2;

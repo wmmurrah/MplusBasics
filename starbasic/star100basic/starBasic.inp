@@ -1,0 +1,16 @@
+TITLE:  STAR analysis
+
+DATA:
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+
+VARIABLE:
+  NAMES ARE childId	readk	read1	mathk	math1
+  male	white black hisp;
+  USEVARIABLES ARE readk-hisp;
+  MISSING ARE ALL (-99);
+  categorical are male-hisp;
+ANALYSIS:
+  TYPE IS Basic;
+
+OUTPUT:  SAMPSTAT PATTERNS;
+plot: type = plot1 plot2;
