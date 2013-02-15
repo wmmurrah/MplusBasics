@@ -12,7 +12,7 @@ VARIABLE:
   standardize math1-readk;
 Model:
   math1 ON mathk readk male black;
-math1; mathk; readk; male; black;
+math1; mathk; readk male; black;
 
 OUTPUT:
 plot: type = plot1 plot2;

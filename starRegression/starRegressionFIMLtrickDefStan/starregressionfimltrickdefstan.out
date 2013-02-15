@@ -1,6 +1,6 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/06/2013   4:11 PM
+02/12/2013  10:41 AM
 
 INPUT INSTRUCTIONS
 
@@ -18,7 +18,7 @@ INPUT INSTRUCTIONS
     standardize math1-readk;
   Model:
     math1 ON mathk readk male black;
-  math1; mathk; readk; male; black;
+  math1; mathk; readk male; black;
 
   OUTPUT:
   plot: type = plot1 plot2;
@@ -321,11 +321,11 @@ DIAGRAM INFORMATION
   If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
 
   Diagram output
-    c:\dropbox\3_teaching\mplusbasics\starregressionfimltrickdefstan.dgm
+    c:\dropbox\3_teaching\mplusbasics\starregression\starregressionfimltrickdefstan\starregressionfi
 
-     Beginning Time:  16:11:59
-        Ending Time:  16:11:59
-       Elapsed Time:  00:00:00
+     Beginning Time:  10:41:27
+        Ending Time:  10:41:28
+       Elapsed Time:  00:00:01
 
 
 

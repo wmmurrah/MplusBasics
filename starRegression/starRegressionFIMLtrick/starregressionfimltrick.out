@@ -1,6 +1,6 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/06/2013   4:08 PM
+02/12/2013  10:41 AM
 
 INPUT INSTRUCTIONS
 
@@ -17,7 +17,7 @@ INPUT INSTRUCTIONS
 
   Model:
     math1 ON mathk readk male black;
-  math1; mathk; readk; male; black;
+  math1; mathk; readk male; black;
 
   OUTPUT: stdyx stdy;
   plot: type = plot1 plot2;
@@ -412,10 +412,10 @@ DIAGRAM INFORMATION
   If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
 
   Diagram output
-    c:\dropbox\3_teaching\mplusbasics\starregressionfimltrick.dgm
+    c:\dropbox\3_teaching\mplusbasics\starregression\starregressionfimltrick\starregressionfimltrick
 
-     Beginning Time:  16:08:23
-        Ending Time:  16:08:23
+     Beginning Time:  10:41:50
+        Ending Time:  10:41:50
        Elapsed Time:  00:00:00
 
 

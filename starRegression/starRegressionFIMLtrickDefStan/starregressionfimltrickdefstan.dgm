@@ -16,7 +16,7 @@ PLOT:
  type = plot1 plot2;
 MODEL:
   math1 ON mathk readk male black;
-math1; mathk; readk; male; black;
+math1; mathk; readk male; black;
 INPUT_END
 2
 0

@@ -11,7 +11,7 @@ VARIABLE:
   
 Model:
   math1 ON mathk readk male black;
-math1; mathk; readk; male; black;
+math1; mathk; readk male; black;
 
 OUTPUT: stdyx stdy;
 plot: type = plot1 plot2;
