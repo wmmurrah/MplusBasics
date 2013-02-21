@@ -1,17 +1,17 @@
 TITLE:  STAR analysis
 
 DATA:
-  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
  
 VARIABLE:
   NAMES ARE childId	readk	read1	mathk	math1
-  male	white black hisp;
-  USEVARIABLES ARE math1 mathk readk male black;
+  male	white other;
+  USEVARIABLES ARE math1 mathk readk male other;
   MISSING ARE ALL (-99);
   
 Model:
-  math1 ON mathk readk male black;
-math1; mathk; readk male; black;
+  math1 ON mathk readk male  other;
+math1; mathk; readk; male; other;
 
 OUTPUT: stdyx stdy;
 plot: type = plot1 plot2;

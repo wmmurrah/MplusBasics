@@ -1,22 +1,22 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/06/2013   4:06 PM
+02/21/2013  11:13 AM
 
 INPUT INSTRUCTIONS
 
   TITLE:  STAR analysis
 
   DATA:
-    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
 
   VARIABLE:
     NAMES ARE childId	readk	read1	mathk	math1
-    male	white black hisp;
-    USEVARIABLES ARE math1 mathk readk male black;
+    male	white other;
+    USEVARIABLES ARE math1 mathk readk male other;
     MISSING ARE ALL (-99);
 
   Model:
-    math1 ON mathk readk male black;
+    math1 ON mathk readk male other;
 
   OUTPUT: stdyx stdy;
   plot: type = plot1 plot2;
@@ -52,7 +52,7 @@ Observed dependent variables
    MATH1
 
 Observed independent variables
-   MATHK       READK       MALE        BLACK
+   MATHK       READK       MALE        OTHER
 
 
 Estimator                                                       ML
@@ -64,7 +64,7 @@ Maximum number of iterations for H1                           2000
 Convergence criterion for H1                             0.100D-03
 
 Input data file(s)
-  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat
 
 Input data format  FREE
 
@@ -83,13 +83,13 @@ Minimum covariance coverage value   0.100
 
 
            Covariance Coverage
-              MATH1         MATHK         READK         MALE          BLACK
+              MATH1         MATHK         READK         MALE          OTHER
               ________      ________      ________      ________      ________
  MATH1          1.000
  MATHK          1.000         1.000
  READK          1.000         1.000         1.000
  MALE           1.000         1.000         1.000         1.000
- BLACK          1.000         1.000         1.000         1.000         1.000
+ OTHER          1.000         1.000         1.000         1.000         1.000
 
 
 
@@ -151,7 +151,7 @@ MODEL RESULTS
     MATHK              0.404      0.121      3.339      0.001
     READK              0.455      0.210      2.169      0.030
     MALE              18.980      8.611      2.204      0.028
-    BLACK            -25.895      8.454     -3.063      0.002
+    OTHER            -25.895      8.454     -3.063      0.002
 
  Intercepts
     MATH1            135.959     71.942      1.890      0.059
@@ -172,7 +172,7 @@ STDYX Standardization
     MATHK              0.464      0.135      3.437      0.001
     READK              0.301      0.138      2.181      0.029
     MALE               0.234      0.108      2.175      0.030
-    BLACK             -0.319      0.105     -3.030      0.002
+    OTHER             -0.319      0.105     -3.030      0.002
 
  Intercepts
     MATH1              3.583      2.138      1.676      0.094
@@ -190,7 +190,7 @@ STDY Standardization
     MATHK              0.011      0.003      3.489      0.000
     READK              0.012      0.005      2.208      0.027
     MALE               0.500      0.223      2.246      0.025
-    BLACK             -0.682      0.215     -3.178      0.001
+    OTHER             -0.682      0.215     -3.178      0.001
 
  Intercepts
     MATH1              3.583      2.138      1.676      0.094
@@ -227,10 +227,10 @@ DIAGRAM INFORMATION
   If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
 
   Diagram output
-    c:\dropbox\3_teaching\mplusbasics\starregressionfiml.dgm
+    c:\dropbox\3_teaching\mplusbasics\starregression\starregressionfiml\starregressionfiml.dgm
 
-     Beginning Time:  16:06:17
-        Ending Time:  16:06:17
+     Beginning Time:  11:13:06
+        Ending Time:  11:13:06
        Elapsed Time:  00:00:00
 
 

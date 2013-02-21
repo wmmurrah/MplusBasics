@@ -1,0 +1,294 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+02/21/2013  11:47 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  STAR analysis
+
+  DATA:
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
+
+  VARIABLE:
+    NAMES ARE childId	readk	read1	mathk	math1
+    male	white other;
+    USEVARIABLES ARE math1 mathk readk male other;
+    MISSING ARE ALL (-99);
+
+  Analysis:
+   estimator = bayes;
+   fbiter = 1000;
+   thin = 20;
+  Model:
+    math1 ON mathk readk male other;
+  math1; mathk; readk male; other;
+
+  OUTPUT: stdyx stdy;
+  plot: type = plot1 plot2;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+STAR analysis
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         100
+
+Number of dependent variables                                    1
+Number of independent variables                                  4
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MATH1
+
+Observed independent variables
+   MATHK       READK       MALE        OTHER
+
+
+Estimator                                                    BAYES
+Specifications for Bayesian Estimation
+  Point estimate                                            MEDIAN
+  Number of Markov chain Monte Carlo (MCMC) chains               2
+  Random seed for the first chain                                0
+  Starting value information                           UNPERTURBED
+  Treatment of categorical mediator                         LATENT
+  Algorithm used for Markov chain Monte Carlo           GIBBS(PX1)
+  Fixed number of iterations                                  1000
+  K-th iteration used for thinning                              20
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+     Number of missing data patterns             4
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              MATH1         MATHK         READK         MALE          OTHER
+              ________      ________      ________      ________      ________
+ MATH1          0.560
+ MATHK          0.370         0.480
+ READK          0.370         0.480         0.480
+ MALE           0.560         0.480         0.480         1.000
+ OTHER          0.560         0.480         0.480         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     USE THE FBITERATIONS OPTION TO INCREASE THE NUMBER OF ITERATIONS BY A FACTOR
+     OF AT LEAST TWO TO CHECK CONVERGENCE AND THAT THE PSR VALUE DOES NOT INCREASE.
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                              20
+
+Bayesian Posterior Predictive Checking using Chi-Square
+
+          95% Confidence Interval for the Difference Between
+          the Observed and the Replicated Chi-Square Values
+
+                                -19.911            19.888
+
+          Posterior Predictive P-Value              0.480
+
+Information Criterion
+
+          Deviance (DIC)                         1767.820
+          Estimated Number of Parameters (pD)      16.923
+          Bayesian (BIC)                         1825.063
+
+
+
+MODEL RESULTS
+
+                                Posterior  One-Tailed         95% C.I.
+                    Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%  Significance
+
+ MATH1      ON
+    MATHK              0.422       0.136      0.002       0.144       0.680      *
+    READK              0.448       0.235      0.028      -0.024       0.915
+    MALE              13.208       9.282      0.073      -5.326      30.837
+    OTHER            -27.517       9.128      0.003     -44.939      -9.620      *
+
+ READK    WITH
+    MATHK            991.050     300.402      0.000     571.190    1715.888      *
+
+ MALE     WITH
+    MATHK             -3.831       4.044      0.134     -12.912       3.436
+    READK             -1.861       2.230      0.180      -6.636       2.301
+
+ OTHER    WITH
+    MATHK             -4.257       3.727      0.122     -11.913       2.269
+    READK             -1.378       2.056      0.230      -5.766       2.500
+    MALE              -0.013       0.029      0.314      -0.069       0.046
+
+ Means
+    MATHK            481.622       7.086      0.000     467.368     494.417      *
+    READK            440.818       3.903      0.000     433.616     448.661      *
+    MALE               0.517       0.052      0.000       0.417       0.623      *
+    OTHER              0.347       0.050      0.000       0.243       0.440      *
+
+ Intercepts
+    MATH1            133.074      74.717      0.035     -11.902     280.374
+
+ Variances
+    MATHK           2597.416     625.075      0.000    1729.351    4119.715      *
+    READK            772.537     192.442      0.000     518.935    1274.380      *
+    MALE               0.276       0.042      0.000       0.207       0.372      *
+    OTHER              0.253       0.040      0.000       0.191       0.349      *
+
+ Residual Variances
+    MATH1            733.251     203.478      0.000     453.823    1224.183      *
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                Posterior  One-Tailed         95% C.I.
+                    Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%  Significance
+ MATH1      ON
+    MATHK              0.462       0.144      0.002       0.166       0.731      *
+    READK              0.270       0.144      0.028      -0.017       0.565
+    MALE               0.151       0.106      0.073      -0.062       0.347
+    OTHER             -0.301       0.098      0.003      -0.492      -0.105      *
+
+ READK    WITH
+    MATHK              0.707       0.083      0.000       0.508       0.831      *
+
+ MALE     WITH
+    MATHK             -0.146       0.137      0.134      -0.412       0.130
+    READK             -0.129       0.141      0.180      -0.394       0.171
+
+ OTHER    WITH
+    MATHK             -0.170       0.135      0.122      -0.421       0.093
+    READK             -0.100       0.138      0.230      -0.357       0.164
+    MALE              -0.049       0.106      0.314      -0.239       0.167
+
+ Means
+    MATHK              9.447       1.073      0.000       7.505      11.549      *
+    READK             15.855       1.770      0.000      12.282      19.283      *
+    MALE               0.984       0.123      0.000       0.757       1.235      *
+    OTHER              0.697       0.113      0.000       0.449       0.898      *
+
+ Intercepts
+    MATH1              2.885       1.756      0.035      -0.227       6.726
+
+ Variances
+    MATHK              1.000       0.000      0.000       1.000       1.000
+    READK              1.000       0.000      0.000       1.000       1.000
+    MALE               1.000       0.000      0.000       1.000       1.000
+    OTHER              1.000       0.000      0.000       1.000       1.000
+
+ Residual Variances
+    MATH1              0.346       0.095      0.000       0.205       0.571      *
+
+
+STDY Standardization
+
+                                Posterior  One-Tailed         95% C.I.
+                    Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%  Significance
+ MATH1      ON
+    MATHK              0.462       0.144      0.002       0.166       0.731      *
+    READK              0.270       0.144      0.028      -0.017       0.565
+    MALE               0.151       0.106      0.073      -0.062       0.347
+    OTHER             -0.301       0.098      0.003      -0.492      -0.105      *
+
+ READK    WITH
+    MATHK              0.707       0.083      0.000       0.508       0.831      *
+
+ MALE     WITH
+    MATHK             -0.146       0.137      0.134      -0.412       0.130
+    READK             -0.129       0.141      0.180      -0.394       0.171
+
+ OTHER    WITH
+    MATHK             -0.170       0.135      0.122      -0.421       0.093
+    READK             -0.100       0.138      0.230      -0.357       0.164
+    MALE              -0.049       0.106      0.314      -0.239       0.167
+
+ Means
+    MATHK              9.447       1.073      0.000       7.505      11.549      *
+    READK             15.855       1.770      0.000      12.282      19.283      *
+    MALE               0.984       0.123      0.000       0.757       1.235      *
+    OTHER              0.697       0.113      0.000       0.449       0.898      *
+
+ Intercepts
+    MATH1              2.885       1.756      0.035      -0.227       6.726
+
+ Variances
+    MATHK              1.000       0.000      0.000       1.000       1.000
+    READK              1.000       0.000      0.000       1.000       1.000
+    MALE               1.000       0.000      0.000       1.000       1.000
+    OTHER              1.000       0.000      0.000       1.000       1.000
+
+ Residual Variances
+    MATH1              0.346       0.095      0.000       0.205       0.571      *
+
+
+R-SQUARE
+
+                                Posterior  One-Tailed         95% C.I.
+    Variable        Estimate       S.D.      P-Value   Lower 2.5%  Upper 2.5%
+
+    MATH1              0.654       0.095      0.000       0.425       0.795
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Scatterplots (sample values)
+  Bayesian posterior parameter distributions
+  Bayesian posterior parameter trace plots
+  Bayesian autocorrelation plots
+  Bayesian posterior predictive checking scatterplots
+  Bayesian posterior predictive checking distribution plots
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\dropbox\3_teaching\mplusbasics\starregression\starregressionfimltrick\starregressionfimltrick
+
+     Beginning Time:  11:47:18
+        Ending Time:  11:47:20
+       Elapsed Time:  00:00:02
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

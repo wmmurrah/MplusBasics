@@ -1,0 +1,99 @@
+VERSION 1.0.0
+INPUT
+TITLE:
+  STAR analysis
+
+DATA:
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
+VARIABLE:
+  NAMES ARE childId readk read1 mathk math1
+  male white other;
+  USEVARIABLES ARE math1 mathk readk male other;
+  MISSING ARE ALL (-99);
+ANALYSIS:
+ estimator = bayes;
+ fbiter = 1000;
+ thin = 20;
+OUTPUT:
+ stdyx stdy;
+PLOT:
+ type = plot1 plot2;
+MODEL:
+  math1 ON mathk readk male other;
+math1; mathk; readk male; other;
+INPUT_END
+3
+3
+3
+3
+1
+GENERAL
+0
+5
+0
+0
+math1 mathk readk male other
+2
+1 0 0 0 0
+0
+0
+1 1 MATHK MATH1    0.422    0.136    0.144    0.680
+1 1 READK MATH1    0.448    0.235   -0.024    0.915
+1 1 MALE MATH1   13.208    9.282   -5.326   30.837
+1 1 OTHER MATH1  -27.517    9.128  -44.939   -9.620
+2 1 READK MATHK  991.050  300.402  571.190 1715.888
+2 1 MALE MATHK   -3.831    4.044  -12.912    3.436
+2 1 MALE READK   -1.861    2.230   -6.636    2.301
+2 1 OTHER MATHK   -4.257    3.727  -11.913    2.269
+2 1 OTHER READK   -1.378    2.056   -5.766    2.500
+2 1 OTHER MALE   -0.013    0.029   -0.069    0.046
+4 1 MATH1  733.251  203.478  453.823 1224.183
+5 1 MATHK 2597.416  625.075 1729.351 4119.715
+5 1 READK  772.537  192.442  518.935 1274.380
+5 1 MALE    0.276    0.042    0.207    0.372
+5 1 OTHER    0.253    0.040    0.191    0.349
+11 1 MATHK MATH1    0.462    0.144    0.166    0.731
+11 1 READK MATH1    0.270    0.144   -0.017    0.565
+11 1 MALE MATH1    0.151    0.106   -0.062    0.347
+11 1 OTHER MATH1   -0.301    0.098   -0.492   -0.105
+12 1 READK MATHK    0.707    0.083    0.508    0.831
+12 1 MALE MATHK   -0.146    0.137   -0.412    0.130
+12 1 MALE READK   -0.129    0.141   -0.394    0.171
+12 1 OTHER MATHK   -0.170    0.135   -0.421    0.093
+12 1 OTHER READK   -0.100    0.138   -0.357    0.164
+12 1 OTHER MALE   -0.049    0.106   -0.239    0.167
+14 1 MATH1    0.346    0.095    0.205    0.571
+15 1 MATHK    1.000    0.000    1.000    1.000
+15 1 READK    1.000    0.000    1.000    1.000
+15 1 MALE    1.000    0.000    1.000    1.000
+15 1 OTHER    1.000    0.000    1.000    1.000
+21 1 MATHK MATH1    0.462    0.144    0.166    0.731
+21 1 READK MATH1    0.270    0.144   -0.017    0.565
+21 1 MALE MATH1    0.151    0.106   -0.062    0.347
+21 1 OTHER MATH1   -0.301    0.098   -0.492   -0.105
+22 1 READK MATHK    0.707    0.083    0.508    0.831
+22 1 MALE MATHK   -0.146    0.137   -0.412    0.130
+22 1 MALE READK   -0.129    0.141   -0.394    0.171
+22 1 OTHER MATHK   -0.170    0.135   -0.421    0.093
+22 1 OTHER READK   -0.100    0.138   -0.357    0.164
+22 1 OTHER MALE   -0.049    0.106   -0.239    0.167
+24 1 MATH1    0.346    0.095    0.205    0.571
+25 1 MATHK    1.000    0.000    1.000    1.000
+25 1 READK    1.000    0.000    1.000    1.000
+25 1 MALE    1.000    0.000    1.000    1.000
+25 1 OTHER    1.000    0.000    1.000    1.000
+31 1 MATHK MATH1    0.462    0.144    0.166    0.731
+31 1 READK MATH1    0.270    0.144   -0.017    0.565
+31 1 MALE MATH1    0.151    0.106   -0.062    0.347
+31 1 OTHER MATH1   -0.301    0.098   -0.492   -0.105
+32 1 READK MATHK    0.707    0.083    0.508    0.831
+32 1 MALE MATHK   -0.146    0.137   -0.412    0.130
+32 1 MALE READK   -0.129    0.141   -0.394    0.171
+32 1 OTHER MATHK   -0.170    0.135   -0.421    0.093
+32 1 OTHER READK   -0.100    0.138   -0.357    0.164
+32 1 OTHER MALE   -0.049    0.106   -0.239    0.167
+34 1 MATH1    0.346    0.095    0.205    0.571
+35 1 MATHK    1.000    0.000    1.000    1.000
+35 1 READK    1.000    0.000    1.000    1.000
+35 1 MALE    1.000    0.000    1.000    1.000
+35 1 OTHER    1.000    0.000    1.000    1.000

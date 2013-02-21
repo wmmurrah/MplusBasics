@@ -1,22 +1,22 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/06/2013   4:05 PM
+02/21/2013  11:11 AM
 
 INPUT INSTRUCTIONS
 
   TITLE:  STAR analysis
 
   DATA:
-    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
    listwise = on;
   VARIABLE:
     NAMES ARE childId	readk	read1	mathk	math1
-    male	white black hisp;
-    USEVARIABLES ARE math1 mathk readk male black;
+    male	white black other;
+    USEVARIABLES ARE math1 mathk readk male other;
     MISSING ARE ALL (-99);
 
   Model:
-    math1 ON mathk readk male black;
+    math1 ON mathk readk male other;
 
   OUTPUT: stdyx stdy;
   plot: type = plot1 plot2;
@@ -32,7 +32,7 @@ STAR analysis
 SUMMARY OF ANALYSIS
 
 Number of groups                                                 1
-Number of observations                                          37
+Number of observations                                          18
 
 Number of dependent variables                                    1
 Number of independent variables                                  4
@@ -44,7 +44,7 @@ Observed dependent variables
    MATH1
 
 Observed independent variables
-   MATHK       READK       MALE        BLACK
+   MATHK       READK       MALE        OTHER
 
 
 Estimator                                                       ML
@@ -54,139 +54,45 @@ Convergence criterion                                    0.500D-04
 Maximum number of steepest descent iterations                   20
 
 Input data file(s)
-  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat
 
 Input data format  FREE
 
 
 
-THE MODEL ESTIMATION TERMINATED NORMALLY
-
-
-
-MODEL FIT INFORMATION
-
-Number of Free Parameters                        6
-
-Loglikelihood
-
-          H0 Value                        -169.616
-          H1 Value                        -169.616
-
-Information Criteria
-
-          Akaike (AIC)                     351.232
-          Bayesian (BIC)                   360.897
-          Sample-Size Adjusted BIC         342.145
-            (n* = (n + 2) / 24)
-
-Chi-Square Test of Model Fit
-
-          Value                              0.000
-          Degrees of Freedom                     0
-          P-Value                           0.0000
-
-RMSEA (Root Mean Square Error Of Approximation)
-
-          Estimate                           0.000
-          90 Percent C.I.                    0.000  0.000
-          Probability RMSEA <= .05           0.000
-
-CFI/TLI
-
-          CFI                                1.000
-          TLI                                1.000
-
-Chi-Square Test of Model Fit for the Baseline Model
-
-          Value                             34.847
-          Degrees of Freedom                     4
-          P-Value                           0.0000
-
-SRMR (Standardized Root Mean Square Residual)
-
-          Value                              0.000
+     NO CONVERGENCE.  NUMBER OF ITERATIONS EXCEEDED.
 
 
 
 MODEL RESULTS
 
-                                                    Two-Tailed
-                    Estimate       S.E.  Est./S.E.    P-Value
+                    Estimate
 
  MATH1    ON
-    MATHK              0.404      0.121      3.339      0.001
-    READK              0.455      0.210      2.169      0.030
-    MALE              18.980      8.611      2.204      0.028
-    BLACK            -25.895      8.454     -3.063      0.002
+    MATHK              0.610
+    READK              0.657
+    MALE              -0.918
+    OTHER              0.000
 
  Intercepts
-    MATH1            135.959     71.942      1.890      0.059
+    MATH1            -31.405
 
  Residual Variances
-    MATH1            561.467    130.538      4.301      0.000
+    MATH1            567.094
 
 
-STANDARDIZED MODEL RESULTS
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     math1 ON mathk*0.61037;
+     math1 ON readk*0.65722;
+     math1 ON male*-0.91771;
+     math1 ON other*-0.00012;
+
+     [ math1*-31.40511 ];
+
+     math1*567.09381;
 
 
-STDYX Standardization
-
-                                                    Two-Tailed
-                    Estimate       S.E.  Est./S.E.    P-Value
-
- MATH1    ON
-    MATHK              0.464      0.135      3.437      0.001
-    READK              0.301      0.138      2.181      0.029
-    MALE               0.234      0.108      2.175      0.030
-    BLACK             -0.319      0.105     -3.030      0.002
-
- Intercepts
-    MATH1              3.583      2.138      1.676      0.094
-
- Residual Variances
-    MATH1              0.390      0.100      3.894      0.000
-
-
-STDY Standardization
-
-                                                    Two-Tailed
-                    Estimate       S.E.  Est./S.E.    P-Value
-
- MATH1    ON
-    MATHK              0.011      0.003      3.489      0.000
-    READK              0.012      0.005      2.208      0.027
-    MALE               0.500      0.223      2.246      0.025
-    BLACK             -0.682      0.215     -3.178      0.001
-
- Intercepts
-    MATH1              3.583      2.138      1.676      0.094
-
- Residual Variances
-    MATH1              0.390      0.100      3.894      0.000
-
-
-R-SQUARE
-
-    Observed                                        Two-Tailed
-    Variable        Estimate       S.E.  Est./S.E.    P-Value
-
-    MATH1              0.610      0.100      6.092      0.000
-
-
-QUALITY OF NUMERICAL RESULTS
-
-     Condition Number for the Information Matrix              0.265E-04
-       (ratio of smallest to largest eigenvalue)
-
-
-PLOT INFORMATION
-
-The following plots are available:
-
-  Histograms of sample values
-  Histograms of estimated values
-  Scatterplots (sample values, estimated values)
 
 DIAGRAM INFORMATION
 
@@ -194,10 +100,10 @@ DIAGRAM INFORMATION
   If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
 
   Diagram output
-    c:\dropbox\3_teaching\mplusbasics\starregressionlw.dgm
+    c:\dropbox\3_teaching\mplusbasics\starregression\starregressionlw\starregressionlw.dgm
 
-     Beginning Time:  16:05:15
-        Ending Time:  16:05:15
+     Beginning Time:  11:11:46
+        Ending Time:  11:11:46
        Elapsed Time:  00:00:00
 
 

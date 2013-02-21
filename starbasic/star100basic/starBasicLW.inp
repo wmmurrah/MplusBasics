@@ -1,14 +1,14 @@
 TITLE:  STAR analysis
 
 DATA:
-  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+  FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
  listwise = on;
 VARIABLE:
   NAMES ARE childId	readk	read1	mathk	math1
-  male	white black hisp;
-  USEVARIABLES ARE readk-black;
+  male	white other;
+  USEVARIABLES ARE readk-other;
   MISSING ARE ALL (-99);
-  categorical are male-black;
+  categorical are male-other;
 ANALYSIS:
   TYPE IS Basic;
 

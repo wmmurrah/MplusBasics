@@ -8,12 +8,14 @@ VARIABLE:
   male	white other;
   USEVARIABLES ARE math1 mathk readk male other;
   MISSING ARE ALL (-99);
-
-DEFINE: 
-  standardize math1-readk;
+  
+Analysis:
+ estimator = bayes;
+ fbiter = 1000;
+ thin = 20;
 Model:
   math1 ON mathk readk male other;
-math1; mathk; readk; male; other;
+math1; mathk; readk male; other;
 
-OUTPUT:
+OUTPUT: stdyx stdy;
 plot: type = plot1 plot2;

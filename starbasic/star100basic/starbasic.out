@@ -1,20 +1,20 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/07/2013  10:05 AM
+02/21/2013   9:54 AM
 
 INPUT INSTRUCTIONS
 
   TITLE:  STAR analysis
 
   DATA:
-    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
 
   VARIABLE:
-    NAMES ARE childId	readk	read1	mathk	math1
-    male	white black hisp;
-    USEVARIABLES ARE readk-hisp;
+    NAMES ARE id	readk	read1	mathk	math1
+    male	white other;
+    USEVARIABLES ARE readk-other;
     MISSING ARE ALL (-99);
-    categorical are male-hisp;
+    categorical are male-other;
   ANALYSIS:
     TYPE IS Basic;
 
@@ -34,7 +34,7 @@ SUMMARY OF ANALYSIS
 Number of groups                                                 1
 Number of observations                                         100
 
-Number of dependent variables                                    8
+Number of dependent variables                                    7
 Number of independent variables                                  0
 Number of continuous latent variables                            0
 
@@ -44,7 +44,7 @@ Observed dependent variables
    READK       READ1       MATHK       MATH1
 
   Binary and ordered categorical (ordinal)
-   MALE        WHITE       BLACK       HISP
+   MALE        WHITE       OTHER
 
 
 Estimator                                                    WLSMV
@@ -56,7 +56,7 @@ Convergence criterion for H1                             0.100D-03
 Parameterization                                             DELTA
 
 Input data file(s)
-  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat
 
 Input data format  FREE
 
@@ -78,8 +78,7 @@ SUMMARY OF MISSING DATA PATTERNS
  MATH1     x  x     x  x
  MALE      x  x  x  x  x  x
  WHITE     x  x  x  x  x  x
- BLACK     x  x  x  x  x  x
- HISP      x  x  x  x  x  x
+ OTHER     x  x  x  x  x  x
 
 
      MISSING DATA PATTERN FREQUENCIES
@@ -106,16 +105,14 @@ Minimum covariance coverage value   0.100
  MATH1          0.370         0.530         0.370         0.560
  MALE           0.480         0.530         0.480         0.560         1.000
  WHITE          0.480         0.530         0.480         0.560         1.000
- BLACK          0.480         0.530         0.480         0.560         1.000
- HISP           0.480         0.530         0.480         0.560         1.000
+ OTHER          0.480         0.530         0.480         0.560         1.000
 
 
            Covariance Coverage
-              WHITE         BLACK         HISP
-              ________      ________      ________
+              WHITE         OTHER
+              ________      ________
  WHITE          1.000
- BLACK          1.000         1.000
- HISP           1.000         1.000         1.000
+ OTHER          1.000         1.000
 
 
 UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
@@ -126,15 +123,12 @@ UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
     WHITE
       Category 1    0.370       37.000
       Category 2    0.630       63.000
-    BLACK
-      Category 1    0.660       66.000
-      Category 2    0.340       34.000
-    HISP
-      Category 1    0.990       99.000
-      Category 2    0.010        1.000
+    OTHER
+      Category 1    0.650       65.000
+      Category 2    0.350       35.000
 
 
-     WARNING:  THE SAMPLE CORRELATION OF BLACK AND WHITE IS -0.992
+     WARNING:  THE SAMPLE CORRELATION OF OTHER AND WHITE IS -0.996
      DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
      INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
 
@@ -154,9 +148,9 @@ RESULTS FOR BASIC ANALYSIS
 
 
            MEANS/INTERCEPTS/THRESHOLDS
-              WHITE$1       BLACK$1       HISP$1
-              ________      ________      ________
-      1        -0.332         0.412         2.326
+              WHITE$1       OTHER$1
+              ________      ________
+      1        -0.332         0.385
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
@@ -168,15 +162,13 @@ RESULTS FOR BASIC ANALYSIS
  MATH1          0.569         0.696         0.663      1724.593
  MALE          -0.047        -0.007        -0.049         0.022
  WHITE          0.089         0.473         0.157         0.544         0.016
- BLACK         -0.089        -0.471        -0.154        -0.544        -0.047
- HISP           0.000         0.000         0.000         0.000        -0.021
+ OTHER         -0.089        -0.472        -0.155        -0.544        -0.081
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
-              WHITE         BLACK         HISP
-              ________      ________      ________
- BLACK         -0.992
- HISP          -0.127         0.152
+              WHITE         OTHER
+              ________      ________
+ OTHER         -0.996
 
 
      STANDARD ERRORS FOR ESTIMATED SAMPLE STATISTICS
@@ -189,9 +181,9 @@ RESULTS FOR BASIC ANALYSIS
 
 
            S.E. FOR MEANS/INTERCEPTS/THRESHOLDS
-              WHITE$1       BLACK$1       HISP$1
-              ________      ________      ________
-      1         0.128         0.129         0.373
+              WHITE$1       OTHER$1
+              ________      ________
+      1         0.128         0.129
 
 
            S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
@@ -203,15 +195,13 @@ RESULTS FOR BASIC ANALYSIS
  MATH1          0.107         0.068         0.106       314.551
  MALE           0.184         0.174         0.181         0.170
  WHITE          0.184         0.152         0.153         0.137         0.160
- BLACK          0.180         0.156         0.150         0.137         0.162
- HISP           5.361         5.102         5.361         4.964         0.332
+ OTHER          0.182         0.155         0.151         0.137         0.161
 
 
            S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
-              WHITE         BLACK         HISP
-              ________      ________      ________
- BLACK          0.000
- HISP           0.329         0.328
+              WHITE         OTHER
+              ________      ________
+ OTHER          0.000
 
 
 PLOT INFORMATION
@@ -228,8 +218,8 @@ DIAGRAM INFORMATION
   No diagram output was produced.
 
 
-     Beginning Time:  10:05:54
-        Ending Time:  10:05:54
+     Beginning Time:  09:54:41
+        Ending Time:  09:54:41
        Elapsed Time:  00:00:00
 
 
