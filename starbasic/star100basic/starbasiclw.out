@@ -1,20 +1,20 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/07/2013  10:10 AM
+02/21/2013  11:05 AM
 
 INPUT INSTRUCTIONS
 
   TITLE:  STAR analysis
 
   DATA:
-    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat";
+    FILE IS "C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat";
    listwise = on;
   VARIABLE:
     NAMES ARE childId	readk	read1	mathk	math1
-    male	white black hisp;
-    USEVARIABLES ARE readk-black;
+    male	white other;
+    USEVARIABLES ARE readk-other;
     MISSING ARE ALL (-99);
-    categorical are male-black;
+    categorical are male-other;
   ANALYSIS:
     TYPE IS Basic;
 
@@ -47,7 +47,7 @@ Observed dependent variables
    READK       READ1       MATHK       MATH1
 
   Binary and ordered categorical (ordinal)
-   MALE        WHITE       BLACK
+   MALE        WHITE       OTHER
 
 
 Estimator                                                    WLSMV
@@ -57,7 +57,7 @@ Maximum number of steepest descent iterations                   20
 Parameterization                                             DELTA
 
 Input data file(s)
-  C:\Dropbox\3_Teaching\SPSS2MplusDemo\starMplus.dat
+  C:\Dropbox\3_Teaching\SPSS2MplusDemo\data\starMplus.dat
 
 Input data format  FREE
 
@@ -70,7 +70,7 @@ UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
     WHITE
       Category 1    0.333       12.000
       Category 2    0.667       24.000
-    BLACK
+    OTHER
       Category 1    0.667       24.000
       Category 2    0.333       12.000
 
@@ -91,7 +91,7 @@ RESULTS FOR BASIC ANALYSIS
 
 
            MEANS/INTERCEPTS/THRESHOLDS
-              WHITE$1       BLACK$1
+              WHITE$1       OTHER$1
               ________      ________
       1        -0.431         0.431
 
@@ -105,13 +105,13 @@ RESULTS FOR BASIC ANALYSIS
  MATH1          0.554         0.609         0.650      1479.933
  MALE          -0.244         0.008        -0.194         0.165
  WHITE         -0.040         0.422         0.041         0.500         0.279
- BLACK          0.040        -0.422        -0.041        -0.500        -0.279
+ OTHER          0.040        -0.422        -0.041        -0.500        -0.279
 
 
            CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
-              WHITE         BLACK
+              WHITE         OTHER
               ________      ________
- BLACK         -0.984
+ OTHER         -0.984
 
 
      STANDARD ERRORS FOR ESTIMATED SAMPLE STATISTICS
@@ -124,7 +124,7 @@ RESULTS FOR BASIC ANALYSIS
 
 
            S.E. FOR MEANS/INTERCEPTS/THRESHOLDS
-              WHITE$1       BLACK$1
+              WHITE$1       OTHER$1
               ________      ________
       1         0.216         0.216
 
@@ -138,13 +138,13 @@ RESULTS FOR BASIC ANALYSIS
  MATH1          0.107         0.117         0.110       371.441
  MALE           0.189         0.212         0.208         0.188
  WHITE          0.213         0.183         0.187         0.188         0.265
- BLACK          0.213         0.183         0.187         0.188         0.265
+ OTHER          0.213         0.183         0.187         0.188         0.265
 
 
            S.E. FOR CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
-              WHITE         BLACK
+              WHITE         OTHER
               ________      ________
- BLACK          0.000
+ OTHER          0.000
 
 
 PLOT INFORMATION
@@ -161,8 +161,8 @@ DIAGRAM INFORMATION
   No diagram output was produced.
 
 
-     Beginning Time:  10:10:01
-        Ending Time:  10:10:01
+     Beginning Time:  11:05:03
+        Ending Time:  11:05:03
        Elapsed Time:  00:00:00
 
 
