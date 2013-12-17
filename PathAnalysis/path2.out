@@ -1,0 +1,300 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+03/07/2013   2:14 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	this is an example of a path analysis
+  	with continuous dependent variables
+  DATA:  FILE IS "C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat";
+  VARIABLE:	NAMES ARE mot2 read2 math3 math1 cov2 cov3;
+  usevariables are math3 mot2 math1;
+
+  Analysis:
+   BOOTSTRAP = 5000;
+   processors = 4;
+
+  MODEL:
+   math3 ON mot2 math1;
+   mot2 ON math1;
+
+  model indirect:
+   math3 IND mot2 math1;
+
+  Output:
+   cinterval (bcbootstrap);
+    stdyx; !included only to generate R squared values
+
+    plot: type = plot1 plot2 plot3;
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a path analysis
+with continuous dependent variables
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    2
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MATH3       MOT2
+
+Observed independent variables
+   MATH1
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Number of bootstrap draws
+    Requested                                                 5000
+    Completed                                                 5000
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        7
+
+Loglikelihood
+
+          H0 Value                       -2555.258
+          H1 Value                       -2555.258
+
+Information Criteria
+
+          Akaike (AIC)                    5124.516
+          Bayesian (BIC)                  5154.019
+          Sample-Size Adjusted BIC        5131.800
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            885.599
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MATH3    ON
+    MOT2               1.041      0.026     40.419      0.000
+    MATH1              1.733      0.100     17.267      0.000
+
+ MOT2     ON
+    MATH1              0.906      0.158      5.719      0.000
+
+ Intercepts
+    MATH3              1.573      0.108     14.519      0.000
+    MOT2              -1.149      0.181     -6.363      0.000
+
+ Residual Variances
+    MATH3              5.710      0.377     15.149      0.000
+    MOT2              16.495      1.013     16.280      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+ MATH3    ON
+    MOT2               0.771
+    MATH1              0.329
+
+ MOT2     ON
+    MATH1              0.232
+
+ Intercepts
+    MATH3              0.279
+    MOT2              -0.275
+
+ Residual Variances
+    MATH3              0.180
+    MOT2               0.946
+
+
+R-SQUARE
+
+    Observed
+    Variable        Estimate
+
+    MATH3              0.820
+    MOT2               0.054
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from MATH1 to MATH3
+
+  Sum of indirect      0.943      0.167      5.638      0.000
+
+  Specific indirect
+
+    MATH3
+    MOT2
+    MATH1              0.943      0.167      5.638      0.000
+
+
+STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from MATH1 to MATH3
+
+  Sum of indirect      0.179      0.029      6.145      0.000
+
+  Specific indirect
+
+    MATH3
+    MOT2
+    MATH1              0.179      0.029      6.145      0.000
+
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ MATH3    ON
+    MOT2             0.975       0.989       0.997       1.041       1.081       1.090       1.107
+    MATH1            1.472       1.537       1.570       1.733       1.899       1.928       1.995
+
+ MOT2     ON
+    MATH1            0.504       0.593       0.639       0.906       1.162       1.211       1.317
+
+ Intercepts
+    MATH3            1.292       1.357       1.392       1.573       1.747       1.782       1.849
+    MOT2            -1.629      -1.507      -1.446      -1.149      -0.850      -0.790      -0.683
+
+ Residual Variances
+    MATH3            4.813       5.044       5.153       5.710       6.398       6.540       6.758
+    MOT2            14.050      14.670      14.933      16.495      18.295      18.632      19.188
+
+
+CONFIDENCE INTERVALS OF TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+Effects from MATH1 to MATH3
+
+  Sum of indirect    0.514       0.615       0.666       0.943       1.219       1.272       1.387
+
+  Specific indirect
+
+    MATH3
+    MOT2
+    MATH1            0.514       0.615       0.666       0.943       1.219       1.272       1.387
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT,
+AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+Effects from MATH1 to MATH3
+
+  Sum of indirect    0.104       0.122       0.131       0.179       0.227       0.236       0.254
+
+  Specific indirect
+
+    MATH3
+    MOT2
+    MATH1            0.104       0.122       0.131       0.179       0.227       0.236       0.254
+
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms of sample values
+  Histograms of estimated values
+  Scatterplots (sample values, estimated values)
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\dropbox\3_teaching\mplusbasics\pathanalysis\path2.dgm
+
+     Beginning Time:  14:14:25
+        Ending Time:  14:14:30
+       Elapsed Time:  00:00:05
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

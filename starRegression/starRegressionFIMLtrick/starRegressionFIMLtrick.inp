@@ -8,10 +8,14 @@ VARIABLE:
   male	white other;
   USEVARIABLES ARE math1 mathk readk male other;
   MISSING ARE ALL (-99);
-  
-Model:
-  math1 ON mathk readk male  other;
-math1; mathk; readk; male; other;
+ categorical are male;
+
+Analysis: estimator = MLR;
+
+ Model:
+    male  ON mathk readk math1  other;
+  math1; mathk; readk; male; other;
+
 
 OUTPUT: stdyx stdy;
 plot: type = plot1 plot2;

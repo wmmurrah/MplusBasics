@@ -1,0 +1,27 @@
+TITLE:	this is an example of a path analysis
+	with continuous dependent variables
+DATA:  FILE IS "C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat";
+VARIABLE:	NAMES ARE mot2 read2 math3 math1 cov2 cov3;
+usevariables are math3 mot2 read2 math1;
+
+Analysis:
+ BOOTSTRAP = 5000;
+ processors = 4;
+
+MODEL:
+ math3 ON mot2 read2 math1;
+ mot2 ON math1;
+ read2 ON math1;
+ read2 with mot2;
+
+model indirect:
+ math3 IND mot2 math1;
+ math3 IND read2 math1;
+ math3 IND math1;
+
+Output:
+ cinterval (bcbootstrap);
+  stdyx; !included only to generate R squared values
+
+
+

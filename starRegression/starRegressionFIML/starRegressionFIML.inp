@@ -8,6 +8,8 @@ VARIABLE:
   male	white other;
   USEVARIABLES ARE math1 mathk readk male other;
   MISSING ARE ALL (-99);
+ 
+ 
   
 Model:
   math1 ON mathk readk male other;

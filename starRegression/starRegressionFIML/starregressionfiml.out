@@ -1,6 +1,6 @@
 Mplus VERSION 7
 MUTHEN & MUTHEN
-02/21/2013  11:13 AM
+03/07/2013   1:57 PM
 
 INPUT INSTRUCTIONS
 
@@ -14,6 +14,8 @@ INPUT INSTRUCTIONS
     male	white other;
     USEVARIABLES ARE math1 mathk readk male other;
     MISSING ARE ALL (-99);
+
+
 
   Model:
     math1 ON mathk readk male other;
@@ -229,8 +231,8 @@ DIAGRAM INFORMATION
   Diagram output
     c:\dropbox\3_teaching\mplusbasics\starregression\starregressionfiml\starregressionfiml.dgm
 
-     Beginning Time:  11:13:06
-        Ending Time:  11:13:06
+     Beginning Time:  13:57:54
+        Ending Time:  13:57:54
        Elapsed Time:  00:00:00
 
 

@@ -1,0 +1,181 @@
+Mplus VERSION 7
+MUTHEN & MUTHEN
+03/07/2013   2:02 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	this is an example of a path analysis
+  	with continuous dependent variables
+  DATA:  FILE IS "C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat";
+  VARIABLE:	NAMES ARE mot2 read2 math3 math1 cov2 cov3;
+  usevariables are math3 mot2 math1;
+  MODEL:
+   math3 ON mot2 math1;
+   mot2 ON math1;
+
+  model indirect:
+   math3 IND mot2 math1;
+
+
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a path analysis
+with continuous dependent variables
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    2
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   MATH3       MOT2
+
+Observed independent variables
+   MATH1
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        7
+
+Loglikelihood
+
+          H0 Value                       -2555.258
+          H1 Value                       -2555.258
+
+Information Criteria
+
+          Akaike (AIC)                    5124.516
+          Bayesian (BIC)                  5154.019
+          Sample-Size Adjusted BIC        5131.800
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            885.599
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MATH3    ON
+    MOT2               1.041      0.026     39.548      0.000
+    MATH1              1.733      0.103     16.870      0.000
+
+ MOT2     ON
+    MATH1              0.906      0.170      5.332      0.000
+
+ Intercepts
+    MATH3              1.573      0.111     14.149      0.000
+    MOT2              -1.149      0.182     -6.319      0.000
+
+ Residual Variances
+    MATH3              5.710      0.361     15.811      0.000
+    MOT2              16.495      1.043     15.811      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.182E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from MATH1 to MATH3
+
+  Sum of indirect      0.943      0.178      5.284      0.000
+
+  Specific indirect
+
+    MATH3
+    MOT2
+    MATH1              0.943      0.178      5.284      0.000
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\dropbox\3_teaching\mplusbasics\pathanalysis\path1.dgm
+
+     Beginning Time:  14:02:56
+        Ending Time:  14:02:56
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

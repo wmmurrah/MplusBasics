@@ -1,0 +1,16 @@
+TITLE:	this is an example of a path analysis
+	with continuous dependent variables
+DATA:  FILE IS "C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat";
+VARIABLE:	NAMES ARE mot2 read2 math3 math1 cov2 cov3;
+usevariables are math3 mot2 math1;
+MODEL:
+ math3 ON mot2 math1;
+ mot2 ON math1;
+
+model indirect:
+ math3 IND mot2 math1;
+
+
+
+
+

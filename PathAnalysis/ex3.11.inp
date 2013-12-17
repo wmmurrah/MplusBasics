@@ -1,0 +1,6 @@
+TITLE:	this is an example of a path analysis
+	with continuous dependent variables
+DATA:	FILE IS ex3.11.dat;
+VARIABLE:	NAMES ARE y1-y3 x1-x3;
+MODEL:	y1 y2 ON x1 x2 x3;
+	y3 ON y1 y2 x2;

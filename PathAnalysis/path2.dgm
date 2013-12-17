@@ -1,0 +1,52 @@
+VERSION 1.0.0
+INPUT
+TITLE:
+ this is an example of a path analysis
+ with continuous dependent variables
+DATA:
+  FILE IS "C:\Dropbox\3_Teaching\MplusBasics\data\ex3.11.dat";
+VARIABLE:
+ NAMES ARE mot2 read2 math3 math1 cov2 cov3;
+usevariables are math3 mot2 math1;
+ANALYSIS:
+ BOOTSTRAP = 5000;
+ processors = 4;
+OUTPUT:
+ cinterval (bcbootstrap);
+  stdyx;
+PLOT:
+ type = plot1 plot2 plot3;
+MODEL:
+ math3 ON mot2 math1;
+ mot2 ON math1;
+INPUT_END
+3
+1
+0
+1
+1
+GENERAL
+0
+2
+0
+1
+math3 mot2 math1
+3
+2 1 0
+0
+0
+1 1 mot2 math3    1.041    0.026    0.990    1.091
+1 1 math1 math3    1.733    0.100    1.537    1.930
+1 1 math1 mot2    0.906    0.158    0.595    1.216
+4 1 math3    5.710    0.377    4.971    6.449
+4 1 mot2   16.495    1.013   14.509   18.481
+11 1 mot2 math3    0.771
+11 1 math1 math3    0.329
+11 1 math1 mot2    0.232
+14 1 math3    0.180
+14 1 mot2    0.946
+31 1 mot2 math3    1.041
+31 1 math1 math3    1.733
+31 1 math1 mot2    0.906
+34 1 math3    5.710
+34 1 mot2   16.495
